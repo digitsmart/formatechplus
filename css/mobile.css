@@ -1,0 +1,54 @@
+@media screen and (max-width: 950px) {
+    .main, .container{
+        width: 98.50%;
+        margin: auto;
+        padding: 0.1em;
+        padding-left: 0px;
+        padding-right: 2px;
+    }
+    .topnav{
+        width: 100%;
+    }
+    .content{
+        display: block;
+        width: 100%;
+        padding: 0.1em;
+        margin: 0 auto;
+        padding-left: 0px;
+        padding-right: 1px;
+        
+    }
+    .coutenue{
+        margin-left: 4px;
+        margin-right: 1px;
+        margin: auto;
+        width: 98%;
+    }
+    header{
+        width: 100%;
+    }
+    aside{
+        display: none;
+    }
+    .card{
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        overflow: hidden;
+    }
+    .card .item{
+        min-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 0.5em;
+    }
+    #home .home{
+        display: block;
+    }
+    article{
+        display: block;
+        width: 100%;
+    }
+    article div{
+        width: 100%;
+    }
+}

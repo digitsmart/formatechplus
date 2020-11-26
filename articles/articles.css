@@ -1,0 +1,31 @@
+article{
+    display: flex;
+}
+
+article h1, h2{
+    text-align: center;
+}
+article .pub{
+    width: 100%;
+    padding: 0.4em;
+    text-align: center;
+    margin:0 auto;
+    -webkit-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+}
+
+@media screen and (max-width: 600px) {
+    article{
+        display: block;
+    }
+    article h1{
+        font-size: 18;
+    }
+    article h2{
+        font-size: 15;
+    }
+    article p, span, li{
+        font-size: 12;
+    }
+  }
