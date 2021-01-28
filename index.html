@@ -11,12 +11,12 @@
         <script type="text/javascript" src="app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="main">
+            <div class="header"></div>
             <div class="topnav" id="myTopnav">
                 <a href="#home" class="active">Home</a>
                 <a href="#news">News</a>
@@ -27,7 +27,7 @@
                   </button>
                   <div class="dropdown-content">
                     <a href="#">html et css</a>
-                    <a href="#">powerpoint</a>
+                    <a href="#powerpoint">powerpoint</a>
                     <a href="#">Gagner d'argent</a>
                   </div>
                 </div> 
@@ -85,38 +85,71 @@
                             
                         </div>
                         <!--fin espace card-->
+
                         <!--espace home-->
                         <div id="home">
-                            <h1 style="text-align: center; color: blue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Blog de formations, Astuces et de conseils en informatique</h1>
                             <div class="home">
-                                <div><img src="images/astuces.png"></div>
-                                <div>
-                                    <p style="text-align: justify;">
-                                        <strong>Nos methode d'apprentissage</strong><br>
-                                        Nous vous proposons des formations en ligne sur whatsapp ou télegram 
-                                        prèsque chaque semaine avec une methode très simple, vidéo, 
-                                        audio et document, après chaque formation vous recevez une certificat de remerciment.<br><br>
-                                        
-                                        <strong>Comment suivre nos formation gratuite</strong><br>
-                                        Pour pouvoir telecharger nos informatique, je vous conseil de 
-                                        telecharger l'application ftech plus, qui me donne la possibilite
-                                        de poster mes livre en niveau 
-                                    </p><hr/>
-                                    <h2>Les services que nous offrons en informatique</h2>
-                                    <p style="text-align: justify;">
-                                                                            
-                                        <strong>Création des formulaires pour formation ou d'autre</strong><br>
-                                        Nous réalison vos formulaires de contact ou d'enregidtrement en html 
-                                        et css et recevez tous vos données sur spreadsheet de google drive ( Excel ).<br><br>
-                                       
-                                        <strong>Présentation ou création des vidéos avec powerpoint</strong><br>
-                                        Faire connaitre votre réseaux sociaux avec de la vidéo publicitaire, nous réalison
-                                         cette vidéo pour vous avec powerpoint pour petite commission.<br><br>
-                                       
-                                         <strong>Création de logo e</strong><br>
-                                        Avec beaucoup de soin nous allons créer le logo de votre entreprise ou de votre site web
-                                         Nos sommes des graphismes professionnelle.
-                                    </p>
+                                <div id="images" style="margin-right: 0.2em;">
+                                    <img src="images/back0.jpg">
+                                </div>
+                                <div id="detail">
+                                    <div class="detail">
+                                        <h3>Création de site web :<span class="m">$100 us</span></h3>
+                                        <p style="text-align: left;font-family: 'Times New Roman', Times, serif;">
+                                            Nous réalisons des sites internet modernes combinant une belle présentation tout 
+                                            en conservant clarté et simplicité.
+                                        </p>
+                                    </div>
+                                    <div class="detail">
+                                        <h3>Création de vidéo marcketing :<span class="m">$5 us</span></h3>
+                                        <p style="text-align: left; font-family: 'Times New Roman', Times, serif;">
+                                            Les visiteurs s’attendent à trouver un contenu lisible, 
+                                            intéressant et bien structuré, une petite video de marcketing.
+                                        </p>
+                                    </div>
+                                    <div class="detail">
+                                        <h3>D'autres petit services :<span class="m">$0.00 us</span></h3>
+                                        <p style="text-align: left; font-family: 'Times New Roman', Times, serif;">
+                                           Profitez un peu de nos autres service a faible economie, tels que: création badge, création logo,
+                                           création flyers, création affiche, carte de visite
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bar"></div>
+                            <div class="home" id="powerpoint">                         
+                                <div id="detail">
+                                    <div class="detail" class="detail1">
+                                        <h3 style="margin-bottom: 1em;">Design 100% avec poowerpoint et modifiable</h3>
+                                        <p style="text-align: left;font-family: 'Times New Roman', Times, serif; box-shadow: 0px 0px 0px; margin-bottom: -0.2em;">
+                                            Télécharger des modèles powerpoint gratuit sur notre plateforme,vous pouvez changer 
+                                            tout ce que vous voulez dans nos presentation powerpoint.
+                                        </p>
+                                        <div style="display: flex; width: 100%; margin-top: 1px;">
+                                            <ul style="margin-top: 1px; width: 100%; border: 1px solid; margin: 0.2em;">
+                                                <h3>Création de presentation</h3>
+                                                <li>Video marcketig</li>
+                                                <li>Carte de visite</li>
+                                                <li>Badge, Affiche, Flyers</li>
+                                            </ul>
+                                            <ul style="margin-top: 1px; width: 100%; border: 1px solid; margin: 0.2em;">
+                                                <h3>Création de carte a tout</h3>
+                                                <li>Carte de mariage</li>
+                                                <li>Carte de bapteme</li>
+                                                <li>carte d'invitation</li>
+                                            </ul>
+                                        </div>
+                                        <p style="text-align: left;font-family: 'Times New Roman', Times, serif; box-shadow: 0px 0px 0px; margin-top: 0.2em;">
+                                            Pour telecharger nos produits, il vous faut l'application <a href="">ftech plus</a> qui vous facilite
+                                            avec le paiment , le mode de paiment est ftp que vous pouvez faire gratuitement
+                                        </p>
+                                        <div style="margin: auto; width: 50%;">
+                                            <a href="shope/listes.html"><button class="btn" style="margin-left: 1em;">Allez voire nos produits</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-right: 0.2em;" id="images">
+                                    <img src="images/produit.jpg">
                                 </div>
                             </div>
                         </div>
@@ -191,7 +224,9 @@
                 </div>
             </div> 
             <footer>
-
+                <p style="text-align: center;">
+                    <span style="color: white;">Design By</span> <span style="color: blue;">Ruban Joseph</span>
+                </p>
             </footer>
         </main>
      

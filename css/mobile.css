@@ -8,6 +8,7 @@
     }
     .topnav{
         width: 100%;
+        height: auto;
     }
     .content{
         display: block;
@@ -24,8 +25,17 @@
         margin: auto;
         width: 98%;
     }
+    .header{
+        width: 100%;
+    }
     header{
         width: 100%;
+        height: 100vw;
+        overflow: hidden;
+        
+    }
+    header .email{
+        width: 70%;
     }
     aside{
         display: none;
@@ -43,6 +53,20 @@
     }
     #home .home{
         display: block;
+        
+    }
+    #home img{
+        width: 100%;
+    }
+    .home .detail{
+        display: block;
+        width: 100%;
+    }
+    .home #detail{
+        width: 100%;
+    }
+    .home #images{
+        width: 100%;
     }
     article{
         display: block;
@@ -51,4 +75,21 @@
     article div{
         width: 100%;
     }
+    .accueil{
+        display: block;
+    }
+    .vid{
+        width: 100%;
+    }
+    .list-videos{
+        width: 100%;
+    }
+    .shope-card{
+        display: block;
+    }
+    .shope-card .card{
+        margin-bottom: 1em;
+    }
+    
+    
 }

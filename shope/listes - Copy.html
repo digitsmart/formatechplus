@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Cours informatique pour débutant</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/mobile.css">
+        <link rel="stylesheet" href="../css/menu.css">
+        <link rel="stylesheet" href="../css/utilisateurs.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" >
+        <script type="text/javascript" src="app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="header"></div>
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Articles
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">html et css</a>
+                    <a href="#">powerpoint</a>
+                    <a href="#">Gagner d'argent</a>
+                  </div>
+                </div> 
+                <a href="#about">About</a>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+              </div>
+            <header>
+                <div class="email">
+                    <h1>Vous voulez apprendre à programmer ?</h1>
+                    <p style="text-align: justify;">
+                        Alors inscrivez votre email pour recevoir 
+                        des conseils gratuits, des informations sur 
+                        la programmation et surtout un livre numérique
+                         pour bien débuter la programmation !
+                        </p>
+                    <form id="contact">
+                        <i class="material-icons" style="font-size:30px;color:blue;">mail</i>
+                        <input type="text" name="email" />
+                        <input type="submit" value="SEND" class="button-blue">
+                      </form>
+                </div>
+            </header>
+            <div class="container">
+                <div class="content">
+                    <div class="coutenue">
+                        <!--espace home-->
+                        <div id="home">
+                            <h1 style="text-align: center; color: blue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Blog de formations, Astuces et de conseils en informatique</h1>
+                            <div class="home">
+                                <div><img src="../images/astuces.png"></div>
+                                <div>
+                                    <p style="text-align: justify;">
+                                        <strong>Nos methode d'apprentissage</strong><br>
+                                        Nous vous proposons des formations en ligne sur whatsapp ou télegram 
+                                        prèsque chaque semaine avec une methode très simple, vidéo, 
+                                        audio et document, après chaque formation vous recevez une certificat de remerciment.<br><br>
+                                        
+                                        <strong>Comment suivre nos formation gratuite</strong><br>
+                                        Pour pouvoir telecharger nos informatique, je vous conseil de 
+                                        telecharger l'application ftech plus, qui me donne la possibilite
+                                        de poster mes livre en niveau 
+                                    </p><hr/>
+                                    <h2>Les services que nous offrons en informatique</h2>
+                                    <p style="text-align: justify;">
+                                                                            
+                                        <strong>Création des formulaires pour formation ou d'autre</strong><br>
+                                        Nous réalison vos formulaires de contact ou d'enregidtrement en html 
+                                        et css et recevez tous vos données sur spreadsheet de google drive ( Excel ).<br><br>
+                                       
+                                        <strong>Présentation ou création des vidéos avec powerpoint</strong><br>
+                                        Faire connaitre votre réseaux sociaux avec de la vidéo publicitaire, nous réalison
+                                         cette vidéo pour vous avec powerpoint pour petite commission.<br><br>
+                                       
+                                         <strong>Création de logo e</strong><br>
+                                        Avec beaucoup de soin nous allons créer le logo de votre entreprise ou de votre site web
+                                         Nos sommes des graphismes professionnelle.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--fin espace home-->  
+                    </div>
+                    <aside>
+                        <!--mes reseau sociaux-->
+                        <div class="block">
+                            <div id="reseau" style="display: flex;">
+                                <div class="reseau">
+                                    <img src="../images/icon facebook.png">
+                                    <p>400</p>
+                                </div >
+                                <div class="reseau">
+                                    <img src="../images/icon telegram.png">
+                                    <p>400</p>
+                                </div>
+                                <div class="reseau">
+                                    <img src="../images/icon twitter.png">
+                                    <p>400</p>
+                                </div>
+                                <div class="reseau">
+                                    <img src="../images/icon youtube.png">
+                                    <p>400</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--fin-->
+
+                         <!--mes article recent-->
+                        <div class="block">
+                            <div class="block-header" style="display: flex;">
+                                <div class="icon"><i class="material-icons" style="font-size:30px;color:white;">list</i></div>
+                                <h1>Articles récents</h1>
+                            </div>
+                            <div style="background-color: white;"> 
+                                    <h1 style="font-size: 18px; text-align: center; margin-top: 2px; margin-bottom: 2px;">Comment gagner de l'argent ?</h1>
+                                    <p style="font-size: 14px; text-align: justify; margin: 0.2em;">
+                                        gagner de l'argent avec votre smarphonte grace des liens que vous partager avec vos amis.
+                                       <a href="articles/Comment_gagner_de_l'argent_avec_des_liens.html"><em> lire la suite</em></a>
+    
+                                    </p>
+                            </div>
+                            <hr/>
+                            <div style="background-color: white;"> 
+                                <h1 style="font-size: 18px; text-align: center; margin-top: 2px; margin-bottom: 2px;">Créer une cart de debit gratuit</h1>
+                                <p style="font-size: 14px; text-align: justify; margin: 0.2em;">
+                                    Creer une carte de debit pour pour recevoir votre argent en ligne et vous pouvez retirer votre argent via Bank
+                                   <a href=""> <em> lire la suite</em></a>
+
+                                </p>
+                            </div>
+                        </div>
+                        <!--fin-->
+
+                          <!--mes article recent-->
+                          <div class="block">
+                            <div class="block-header" style="display: flex;">
+                                <div class="icon"><i class="material-icons" style="font-size:30px;color:white;">list</i></div>
+                                <h1>Articles récents</h1>
+                            </div>
+                            <div style="background-color: white;border: 2px solid;"> 
+                                    <!-- show user module -->
+                                    <ul id="user-list"></ul>
+                                    <div id="user-detail"></div>
+
+                            </div>
+                        </div>
+                        <!--fin-->
+
+                    </aside>
+                </div>
+            </div> 
+            <footer>
+
+            </footer>
+        </main>
+     
+        
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+    </body>
+</html>

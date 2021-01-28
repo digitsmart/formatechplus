@@ -4,7 +4,7 @@ body{
 }
 .main{
     margin: auto;
-    margin-top: 48px;
+    margin-top: 1px;
     
 
 }
@@ -26,7 +26,7 @@ header .email{
     opacity: 0.7;
     margin: auto;
     border: 2px solid blue;
-    width: 25%;
+    width: 35%;
     padding: 1em;
 }
 header .email input{
@@ -43,6 +43,12 @@ header h1{
     text-align: center;
     font-size: 20px;
 
+}
+.header{
+    height: 30px;
+    width: 91%;
+    background-color: rgb(7, 78, 211);
+    margin: auto;
 }
 
 #popup{
@@ -62,18 +68,65 @@ header h1{
 .coutenue{
     width: 100%;
     height: auto;
-    border: 2px solid blue;
     margin: 0.1em;
 }
 #home{
     width: 98.50%;
     height: auto;
-    border: 2px solid blue;
     margin-left: 0.3em;
     margin: auto;
     padding: 0.2em;
 }
-
+p{
+    font-size: 18px;
+}
+strong{
+    font-size: 23px;
+    margin-top: 3px;
+}
+h3{
+    color: blue;
+    font-weight: bold;
+}
+img{
+    width: 100%;
+    margin-right: 0.5em;
+}
+.home b{
+    border: 1px solid blue;
+    padding: 2px;
+}
+.detail{
+    margin-top: -0.5em;
+}
+.detail .m{
+    background-color: black;
+    color: white;
+    margin: 0.2em;
+    margin: 2px;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+.detail p{
+    margin-top: -1em;
+    padding-top: 0.5em;
+    padding: 0.2em;
+    -webkit-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+}
+.detail1 p{
+    margin-top: 1em;
+    margin-bottom: 1px;
+    padding-top: 0.5em;
+    padding: 0.2em;
+    -webkit-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+}
+.detail ul li, ul h3{
+    margin-left: -1em;
+}
 .card a{
   text-decoration: none;
   color: white;
@@ -116,6 +169,42 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
     animation-name: example;
     animation-duration: 10s;
 }
+.home button{
+    border:none;
+    padding:6px 2 6px 2;
+    border-radius:15%;
+    border-bottom:3px solid gray;
+    font:bold 13px Arial;
+    color: white;
+    background: blue;
+    padding: 0.5em;
+    animation-name: example;
+    animation-duration: 10s;
+}
+.home #detail{
+    width: 50%;
+}
+.home #images{
+    width: 50%;
+}
+.bar{
+    width: 100%;
+    height: 80px;
+    background-color: gray;
+    margin-bottom: 1em;
+}
+footer{
+    background-color:black;
+    background-size: cover;
+    width: 90.98%;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding-top: 2em;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 @keyframes example {
     0%   {background-color: orangered;}
     20%  {background-color: black;}
@@ -124,6 +213,41 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
     80%  {background-color: pink;}
     100% {background-color: green;}
   }
+
+  .shope-card{
+    width: 100%;
+    display: flex;
+}
+.shope-card .card{
+    display: block;
+    width: 100%;
+    margin: 0.3em;
+    -webkit-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+}
+.shope-card .btn-p{
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+.shope-card img{
+    width: 100%;
+}
+.shope-card p{
+    margin: 1px;
+}
+.shope-card h1{
+    margin: 3px;
+}
+
+.shope-card .btn-p a{
+    color: black;
+}
+video{
+    width: 400px;
+    height: 250px;
+    margin-right: 1em;
+}
 aside{
     width: 260px;
     height: auto;
@@ -146,6 +270,32 @@ aside img{
     margin-top: 0px;
     text-align: center;
     border: 1px solid;
+}
+
+.accueil{
+    display: flex;
+}
+.vid{
+    width: 70%;
+    margin-right: 0.2em;
+    border: 2px solid;
+}
+.list-videos{
+    width: 30%;
+    border: 2px solid;
+}
+.acceuil img{
+    width: 100%;
+}
+.search{
+    width: 100%;
+    box-shadow: 1px 1px 1px black;
+}
+.search input{
+    margin: 0.3em;
+    padding: 0.2em;
+    width: 97%;
+    border-radius: 20px;
 }
 aside .block{
     margin: 0.2em;
