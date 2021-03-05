@@ -13,6 +13,7 @@
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6cd1603b2a1b1cf5ddfe9ed9c/d2a01b4d5b71bdcb9abc56dc0.js");</script>
     </head>
     <body>
         <div class="main">
@@ -43,7 +44,12 @@
                         la programmation et surtout un livre numérique
                          pour bien débuter la programmation !
                         </p>
-                    <form id="contact">
+                         <!--Update the URL for thank you page on form submit -->
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+                        onload="if(submitted) {window.location='http://zerobudget.club/';}"></iframe> 
+                        
+                        <!-- Update the Google forms URL in action-->
+                    <form id="contact" action="https://docs.google.com/forms/d/e/1FAIpQLSdYcwuVIa_vhLRglEmj6rvHxE7qYyw-UA31lrrFIBZIr0gzDQ/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm(); ">
                         <i class="material-icons" style="font-size:30px;color:blue;">mail</i>
                         <input type="text" name="email" />
                         <input type="submit" value="SEND" class="button-blue">
@@ -53,13 +59,29 @@
             <div class="container">
                 <div class="content">
                     <div class="coutenue">
+                        <div class="banniere">
+                            <div class="pub1"></div>
+                            <div class="annonces">
+                                <h1>Formation sur la programmation web en html et css</h1>
+                                <h2>Cours création de site web</h2>
+                                <p>
+                                    <span>
+                                        <strong>Objectif de la formation</strong> : 
+                                        Savoir créer un site dynamique avec les langages HTML et CSS ( codage )
+                                        - Savoir créer un site web avec les logiciels cms
+                                    </span>
+                                </p>
+                                <a href="Formulaire/inscription formation.html"><p class="btnp">Inscrivez-vous dès maintenant</p></a>
+                            </div>
+                            <div class="pub2"></div>
+                        </div><hr style="margin-top: 1px;"/>
                         <!--espace card-->
                         <div class="card">
                             <div class="item">
                                 <center><img src="images/img1.png"></center>
                                 <h1>Programation web</h1>
                                 <P>Apprendre la programmation web sur android, ce cours est fait pour les débutants</P>
-                               <center><button>Suivre ce cours</button></center>
+                               <center><a href="./articles/formulaire.html"><button>Suivre ce cours</button></a></center>
                             </div>
 
                             <div class="item">
@@ -73,7 +95,7 @@
                                 <center><img src="images/img3.png"></center>
                                 <h1>Qui suis-je ?</h1>
                                 <P>Un partenaire qui sera toujour a vos cotées en tant que coach pour vous guider</P>
-                                <center><button>Suivez-moi</button></center>
+                                <center><a href="https://t.me/ftechplus"><button>Suivez-moi</button></a></center>
                             </div>
 
                             <div class="item">
@@ -85,7 +107,7 @@
                             
                         </div>
                         <!--fin espace card-->
-
+                       
                         <!--espace home-->
                         <div id="home">
                             <div class="home">
@@ -101,7 +123,7 @@
                                         </p>
                                     </div>
                                     <div class="detail">
-                                        <h3>Création de vidéo marcketing :<span class="m">$5 us</span></h3>
+                                        <h3>Vidéo de marcketing :<span class="m">$5 us</span></h3>
                                         <p style="text-align: left; font-family: 'Times New Roman', Times, serif;">
                                             Les visiteurs s’attendent à trouver un contenu lisible, 
                                             intéressant et bien structuré, une petite video de marcketing.
@@ -116,7 +138,26 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bar"></div>
+                            <div class="bar">
+                                <div class="a-img"><img src="images/windows-7-icon-11.png" style="width: 110px;"></div>
+                                <div class="a-detail">
+                                    <h1>Reparation d'ordinateur</h1>
+                                    <ul>
+                                        <li>Installation Windows</li>
+                                        <li>Activation Windows</li>
+                                        <li>Crack mot de pass windows</li>
+                                    </ul>
+                                </div>
+                                <div class="a-img"><img src="images/Internet_Line-20-512.png" style="width: 110px;"></div>
+                                <div class="a-detail">
+                                    <h1>Installation logiciels</h1>
+                                    <ul>
+                                        <li>Installation logiciels</li>
+                                        <li>Activation logiciels</li>
+                                        <li>Crack mot de pass windows</li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="home" id="powerpoint">                         
                                 <div id="detail">
                                     <div class="detail" class="detail1">
@@ -154,6 +195,7 @@
                             </div>
                         </div>
                         <!--fin espace home-->  
+                       
                     </div>
                     <aside>
                         <!--mes reseau sociaux-->
