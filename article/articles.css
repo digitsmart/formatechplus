@@ -1,0 +1,87 @@
+#ttr_headerr #ttr_header_inner{
+    background-color: blue;
+}
+
+h1{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2px;
+    color: blue;
+    text-align: center;
+}
+h2{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2px;
+    color: orangered;
+    text-align: center;
+}
+h3{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2px;
+    color: black;
+    text-align: center;
+}
+p{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2px;
+    margin-left: 0.5em;
+    color: black;
+}
+img{
+    width: 100%;
+}
+.bar{
+    display: flex;
+    width: 90%;
+    height: max-content;
+    position: fixed;
+    bottom: 0%;
+    left: 50px;
+    background-color: gray;
+}
+.bar button{
+    width: 100%;
+}
+.bar .share_twitter{
+    background-color: rgb(3, 87, 143);
+    color: white;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.bar .share_facebook{
+    background-color: rgb(1, 15, 78);
+    color: white;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.bar .share_whatsapp{
+    background-color: rgb(1, 172, 15);
+    color: white;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.bar .share_telegram{
+    background-color: rgb(33, 63, 197);
+    color: white;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bar img{
+   width: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .bar{
+        display: flex;
+        width: 100%;
+        height: max-content;
+        position: fixed;
+        bottom: 0%;
+        left: 0%;
+        background-color: gray;
+    }
+}
