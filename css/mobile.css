@@ -164,7 +164,19 @@
       .contact .contact-image{
           width: 100%;
       }
-      .article{
+      .home .article{
         display: inline-block;
+        width: 100%;
     }
+    .home #home{
+        display: block;
+        width: 100%;
+    }
+    aside{
+        display: none;
+    }
+    .art-layout-cell{
+        display: none;
+    }
+   
   }
