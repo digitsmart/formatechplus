@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ftech Plus</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Comment gagner de l'argent, argent, informarique, formation, facebook, whatsapp" >
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/mobile.css">
+        <link rel="stylesheet" href="css/paiment.css">
+        <link rel="icon"  type="image/png" href="images/logo.png">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Orbitron:700&display=swap" rel="stylesheet">
+        <meta name="description" content="Apprendre le langage html et du css gratuitement,Cours et formations pour les débutant">
+        <meta name="og:title" property="og:title" content="Comment gagner de l'argent avec les réseaux sociaux ?">
+        <meta name="robots" content="formation informatique, cours programmtion web en html et css">
+        <link rel="canonical" href="https://ftechplus.netlify.app/articles/comment_gagner_de_l'argent_avec_des_liens">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <script src="js/paiement.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6049c0676ac5460013735f06&product=inline-follow-buttons' async='async'></script>
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179488738-1"></script>
+       <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'UA-179488738-1');
+       </script>
+    </head>
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="../index.html" class="active">Home</a>
+            <a href="Articles/hacker et cracker.html" style="display: none;">Informatiques</a>
+            <a href="../index.html" style="display: block;">Contact</a>
+            <a href="#about" style="display: none;">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <header>
+        </header>
+        <div class="container">
+            <div class="coutenu">
+                <div class="content">
+                    <section class="articles">
+                        <h1>Video intro pour les reseaux sociau ( 100% powerpoint et modifiable)</h1>
+                        <article>
+                            <div class="item1"><a href="images/intro1.jpg"><img src="images/intro1.jpg"></a></div>
+                            <div class="item2">
+                                <p>
+                                    <ul>
+                                        <li>Prix de ce produit en gourdes : <span>HTG 50</span></li>
+                                        <li>Prix de ce produit en dollars : <span>$1.3</span></li>
+                                        <li>Logiciel de disign : <span>Powerpoint 2016</span></li>
+                                        <li>Lageur et hauteur : <span>1280 X 720</span></li>
+                                        <li>Couleur background : <span>Noir</span></li>
+                                    </ul>
+                                </p>
+                                <div class="btn-prix">
+                                    <a href="#paiment" class="a" onclick="document.getElementById('paiment').style.display='block'"><p>Acheter avec cart</p></a>
+                                    <a href="#paiment"  class="a" onclick="document.getElementById('paiment').style.display='block'"><p>Acheter avec FTP</p></a>
+                                </div>
+                            </div>
+                            <div class="paiment" id="paiment">
+                                    <!---------------------Formulaire de paiement en ftp----------------------------------->
+                                    <div class="form" id="form">
+                                        <!--pour le code d'acces-->
+                                        <div class="groupe">
+                                            <h1>Votre paiement avec FTP</h1>
+                                            <div class="prix">
+                                                <input type="text" value="le prix est :" class="prix1" disabled>
+                                                <input type="text" value="500" id="prix" disabled>
+                                                <input type="text" value="FTP" class="prix1" style="width: fit-content;" disabled>
+                                            </div>
+                                            <hr/>
+                                            <p id="msg"></p>
+                                            <div class="input">
+                                            <input type="text" id="number">
+                                            </div>
+                                            <div class="input" style="display: flex; color: blue;">
+                                                <div class="p"><p>Vous avez</p></div>
+                                                <input type="montant" id="montant" disabled>
+                                                <div class="p"><p>FTP</p></div>
+                                            </div>
+                                        </div>
+                                        <div class="bar-btn">
+                                            <button id="select"><img src="images/logo.png" style="width: 20px; height: 20px;">balance</button>
+                                            <button id="insert"><img src="images/logo.png" style="width: 20px; height: 20px;"> Payer</button>
+                                            <button id="clean" onclick="document.getElementById('montant').value = ''">Nettoyer les champs</button>
+                                        </div>
+                                        
+                                </div>
+                                <div class="fichier" id="fichier">
+                                    <center>
+                                        <img src="images/logo.png" width="100%">
+                                        <h1>Paiment recu avec succès</h1>
+                                        <p>Cliquer sur le boutton, pour télécharger le document</p>
+                                        <button>Télécharger le maintenant</button>
+                                    </center>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="reseau">
+                                <center>
+                                    <div>
+                                <!-- Facebook -->
+                                    <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer.php?u=intro logo.html" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><img src="icons/facebook_icon.png" alt="Facebook" /></a>
+                                <!-- //Facebook -->
+                                
+                                <!-- Twitter -->
+                                        <a target="_blank" title="Twitter" href="https://twitter.com/share?url=https://bit.ly/2sI7H3v" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"><img src="icons/twitter_icon.png" alt="Twitter" /></a>
+                                <!-- //Twitter -->
+                                
+                                <!-- Google + -->
+                                        <a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://tontonduweb.com/previews-warc/genieCivil/article1.html" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="icons/gplus_icon.png" alt="Google Plus" /></a>
+                                <!-- //Google + -->
+                                
+                                <!-- Linkedin -->
+                                        <a target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://tontonduweb.com/previews-warc/genieCivil/article1.html" rel="nofollow" onclick="javascript:window.open(this.href, '','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="icons/linkedin_icon.png" alt="Linkedin" /></a>
+                                <!-- //Linkedin -->
+                                
+                                <!-- Email -->
+                                        <a target="_blank" title="Envoyer par mail" href="mailto:?Subject=Regarde ça c'est cool !&amp;Body=regarde%20cet%20article%20c'est%20super !%20 https://tontonduweb.com/previews-warc/genieCivil/article1.html" rel="nofollow"><img src="icons/email_icon.png" alt="email" /></a>
+                                <!-- //Email -->
+                                    </div>
+                                </center>
+                        </div>
+                    </section>
+                </div>
+                <aside>
+
+                </aside>
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+        <script src="js/paiement.js"></script>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+    </body>
+</html>

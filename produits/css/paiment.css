@@ -1,0 +1,90 @@
+.form{
+    border: 2px solid blue;
+    margin: 0.3em;
+    padding: 0.2em;
+}
+.form .groupe{
+    margin: 3px auto;
+}
+.form .prix{
+    margin: 1px auto;
+    display: flex;
+}
+.prix .prix1{
+    width: 100%;
+    margin: 2px;
+}
+.prix #prix{
+    width: 100%;
+    margin: 2px;
+}
+.form .input{
+    width: 100%;
+    border: 1px solid black;
+    margin:3px auto;
+}
+.form .input input{
+    width: 100%;
+    padding: 0.4em;
+}
+.input .p{
+    width: 100%;
+    margin: 2px;
+}
+.input #montant{
+    width: 100%;
+    margin: 2px;
+}
+.form .bar-btn{
+    display: flex;
+    width: 100%;
+}
+.form .bar-btn button{
+    display: flex;
+    width: 100%;
+}
+#select{
+    background-color: blue;
+    color: white;
+    width: max-content;
+    padding: 0.2em;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#insert{
+    background-color: orangered;
+    color: white;
+    display: none;
+    width: max-content;
+    padding: 0.2em;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#clean{
+    background-color: red;
+    color: white;
+    display: none;
+    width: max-content;
+    padding: 0.2em;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#fichier{
+    display: none;
+}
+#paiment{
+    display: none;
+}
+.fichier {
+    height: auto;
+    border: 2px solid;
+}
+.fichier button{
+    padding:1em;
+}
