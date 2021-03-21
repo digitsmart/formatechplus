@@ -7,6 +7,10 @@
   }
   body{
     font-family: montserrat;
+    background-image: url('../images/arriere\ plan.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   .topnav {
     width: 100%;
@@ -21,9 +25,14 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px 6px;
+    margin: 5px 6px;
     text-decoration: none;
     font-size: 17px;
+    border: 2px solid;
+    box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.54) inset;
+    -webkit-box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.54) inset;
+    -moz-box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.54) inset;
   }
   
   .topnav a:hover {
@@ -35,26 +44,33 @@
     background-color: #eca406;
     color: white;
   }
+  .topnav a.active-p{
+    position: relative;
+    left: 80%;
+    background-color: red;
+    margin: 2px 0px 0px 0px;
+  }
   
   .topnav .icon {
     display: none;
   }
   .header{
-    background: url('../images/back2.jpg') no-repeat;
+    background: url('../images/Univers\ intro.gif') no-repeat;
     background-size: cover;
     height: 100vh;
     overflow: hidden;
+    margin: 1em auto;
   }
   .header-content{
     overflow: hidden;
       display: flex;
       width: 75%;
       background-color: rgb(255, 255, 255, 0.3);
-      margin: -12px auto;
+      margin: -2em auto;
       margin-bottom: 2px;
   }
   .header-item img{
-    width: 50%;
+    width: 100%;
     height: 340px;
     margin-top: 1em;
   }
@@ -133,16 +149,19 @@
   .container{
     width: 100%;
     padding: 1em;
-    display: inline-block;
+    display: flex;
   }
   .content{
     width: 90%;
-    margin: 1em auto;
+    margin: 0.1em auto;
+    margin-right: 0.3em;
+    background-color: white;
   }
 
   section{
     width: 100%;
   }
+  
   #home{
     background: white;
     padding-left:0.1em ;
@@ -170,6 +189,9 @@
   .card{
     width: 100%;
     display: flex;
+    border: 2px solid blue;
+    border-radius: 10px;
+    margin-top: 0.2em;
 }
 .card .item{
     width: 100%;
@@ -179,6 +201,9 @@
     -webkit-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+}
+.card .ba{
+  background-color: gray;
 }
 .card .item img{
     width: 100px;
@@ -234,6 +259,7 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
     color: orangered;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 .card p{
     font-size: 13;
     text-align: center;
@@ -254,6 +280,8 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
 #liste{
   display: flex;
   margin-top: 1em;
+  border: 1px solid orange;
+  padding: 0.5em;
 }
 #liste .images{
   width: 100%;
@@ -273,11 +301,28 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
   margin-left: 0.5em;
   margin-top: 0.6em;
 }
-
+.detail h1{
+  margin-bottom: -1em;
+  border-bottom: 2px solid;
+}
+.detail h1{
+  color: blue;
+  margin-bottom: -1em;
+}
+.detail .m{
+  width: 100%;
+  background-color: blue;
+  color: white;
+  padding:5px 1em 5px 1em;
+  margin-left: 3em;
+}
+.detail p{
+  margin-top: 1px;
+}
 .horloge{
+  display: flex;
   margin-top: 3px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
@@ -505,7 +550,49 @@ input[type=submit]:hover {
 
 aside{
   width: 25%;
-  height: 360px;
+  height: auto;
   background-color: blue;
 }
+aside .block{
+  background-color: white;
+  margin-left: 2px;
+  margin-right: 2px;
+}
 
+aside .block-header{
+  background-color: white;
+  color: black;
+  border-bottom: 2px solid;
+  margin:0px 0.2em 0px 0.2em ;
+}
+aside .block-header h1{
+  font-size: 18px ;
+  padding: 2px 4px 1px 4px;
+}
+aside .block-content{
+  margin:7px 0.2em 9px 0.2em ;
+  -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+}
+aside .block-content p{
+  text-align: center;
+}
+aside .block-content .details img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+aside .block-content .details p span{
+  font-size: 12px;
+  font-family: 'Times New Roman', Times, serif;
+}
+aside .block-content .email form{
+  border: 2px solid orangered;
+  margin: 5px;
+  padding: 0.3em;
+}
+aside .block-content .email .button-blue{
+  width: 100%;
+  margin: 5px 2px;
+}

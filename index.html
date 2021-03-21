@@ -7,7 +7,7 @@
         <meta name="keywords" content="Comment gagner de l'argent, argent, informarique, formation, facebook, whatsapp" >
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/mobile.css">
-        <script src="js/pop.js"></script>
+        <link rel="stylesheet" href="css/stylepop.css">
         <link rel="icon" href="../images/mon logo.ico" type="image/x-icon">
         <link rel="img" href="https://ftechplus.netlify.app/produits/images/intro1.jpg">
         <link rel="stylesheet" href="css/pop.css" type="text/css">
@@ -19,7 +19,8 @@
         <link rel="canonical" href="https://ftechplus.netlify.app/articles/comment_gagner_de_l'argent_avec_des_liens">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <script src="https://apis.google.com/js/platform.js"></script>
-       
+        <script src="js/pop.js"></script>
+        <script src="js/script.js"></script>
         <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6049c0676ac5460013735f06&product=inline-follow-buttons' async='async'></script>
        <!-- Global site tag (gtag.js) - Google Analytics -->
        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179488738-1"></script>
@@ -36,11 +37,39 @@
             <a href="index.html" class="active">Home</a>
             <a href="Articles/hacker et cracker.html" style="display: none;">Informatiques</a>
             <a href="#contact" style="display: block;">Contact</a>
-            <a href="produits/listes-des-produits.html" style="display: block;">Mes Produits</a>
+            <a href="produits/listes-des-produits.html" style="display: none;">Mes Produits</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i>
             </a>
+            <a href="produits/listes-des-produits.html" class="active-p"><img src="images/logo.png" style="width: 30px;">Produits</a>
         </div>
+        <div class="login-popup">
+            <div class="box">
+                 <div class="img-area">
+                     <div class="img">
+                     </div>
+                     <h1>Your Logo</h1>
+                 </div>
+                 <div class="form">
+                     <div class="close">&times;</div>
+                     <h1>Log In</h1>
+                     <form>
+                         <div class="form-group">
+                             <input type="text" placeholder="Email" class="form-control">
+                         </div>
+                         <div class="form-group">
+                             <input type="password" placeholder="Password" class="form-control">
+                         </div>
+                         <div class="form-group">
+                             <label><input type="checkbox">
+                                 Remember Me
+                             </label>
+                         </div>
+                         <button type="button" class="btn">Log In</button>
+                     </form>
+                 </div>
+            </div>
+       </div>
           <div class="header">
               <div class="reseau">
                 <div class="fb-like" data-href="https://facebook.com/ftechplus" data-width="" data-layout="box_count" data-action="like" data-size="large" data-share="true"></div>
@@ -49,7 +78,7 @@
               </div>
                 <div class="header-content">
                     <div class="header-item" id="header-item1">
-                        <a href="https://ftechplus.netlify.app/produits/images/intro1.jpg"><img src="images/a.png"></a>
+                        <a href="https://ftechplus.netlify.app/produits/images/intro1.jpg"><img src="produits/gif/cartoon anime.gif"></a>
                     </div>
                     <div class="header-item">
                         <div class="item-desc">
@@ -79,8 +108,64 @@
                 <div class="horloge">
                     <div class="heures"></div>
                     <div class="date"></div>
-                  </div>
+                </div>
           </div>
+           <section>
+                       <!--espace card-->
+                       <div class="card" style="background-color: white;">
+                        <div class="item">
+                            <div class="bar-item" style="display: flex;">
+                                <div class="of">Offres</div>
+                                <div class="of-p" style="background-color: blue;width: 100%;"><p>5000<span>FTP</span></p></div>
+                            </div>
+                           <div class="ba"><center><img src="images/site.png"></center></div>
+                            <h1>Création de Blog personel</h1>
+                            <p>Nous réalison votre blog dans deux jours ou plus et
+                               nous mettons en ligne votre blog, pour un tout petit prix
+                            </p><hr />
+                            <a style="display: flex;"><p class="gdes">1500gdes</p><p class="us">$30</p></a>
+                        </div>
+
+                        <div class="item">
+                            <div class="bar-item" style="display: flex;">
+                                <div class="of">Offres</div>
+                                <div class="of-p" style="background-color: blue;width: 100%;"><p>5000<span>FTP</span></p></div>
+                            </div>
+                           <div class="ba"><center><img src="images/marcketing.png"></center></div>
+                            <h1>Video marcketing powerpoint</h1>
+                            <P>Si vous cherchez à faire une présentation de tendances marcketing, 
+                               alors ce site vous presente des modèles PowerPoint et editable. </P><hr />
+                            <a style="display: flex;"><p class="gdes">1000gdes</p><p class="us">$20</p></a>
+                        </div>
+
+                        <div class="item">
+                            <div class="bar-item" style="display: flex;">
+                                <div class="of">Offres</div>
+                                <div class="of-p" style="background-color: blue;width: 100%;"><p>5000<span>FTP</span></p></div>
+                            </div>
+                           <div class="ba"><center><img src="images/perte de donne.png"></center></div>
+                            <h1>Pertes accidentelles</h1>
+                            <P>Les données perdues en raison d'erreurs humaines telles que le formatage 
+                               ou la réinstallation de fichiers.</P><hr />
+                            <a class="price" style="display: flex;"><p class="gdes">1500gdes</p><p class="us">$30</p></a>
+                        </div>
+
+                        <div class="item">
+                            <div class="bar-item" style="display: flex;">
+                                <div class="of">Abonnez</div>
+                                <div class="of-p" style="background-color: blue;width: 100%;"><p>5000<span>FTP</span></p></div>
+                            </div>
+                           <div class="ba"><center><img src="images/telegram.png"></center></div>
+                            <h1>Vous avez besoin d'aide</h1>
+                            <P>Si vous avez besoin d'aide, n'hesiter pas a me contacter, je serai ravis pour vous guider, rejoignez notre 
+                               chaine sur telegram
+                            </P><hr />
+                            <a style="display: flex;" href="https://t.me/ftechplus"><p class="gdes">Gratuit</p><p class="us">$0.00</p></a>
+                        </div>
+                        
+                        </div>
+                  </section>
+                    <!--fin espace card-->
           <div class="container">
               <div class="content">
                   <section id="home">
@@ -112,90 +197,47 @@
                         <img src="images/Annonce-1.gif">
                     </div>
                   </section>
-                  <section>
-                       <!--espace card-->
-                       <div class="card">
-                        <div class="item">
-                           <div class="of">OFFRES</div>
-                            <center><img src="images/site.png"></center>
-                            <h1>Création de Blog personel</h1>
-                            <p>Nous réalison votre blog dans deux jours ou plus et
-                               nous mettons en ligne votre blog, pour un tout petit prix
-                            </p><hr />
-                            <a style="display: flex;"><p class="gdes">1500gdes</p><p class="us">$30</p></a>
+                 
+                    <section id="liste" >
+                        <div class="images">
+                            <img src="images/back1.jpg">
                         </div>
-
-                        <div class="item">
-                           <div class="of">OFFRES</div>
-                            <center><img src="images/marcketing.png"></center>
-                            <h1>Video marcketing powerpoint</h1>
-                            <P>Si vous cherchez à faire une présentation de tendances marcketing, 
-                               alors ce site vous presente des modèles PowerPoint et editable. </P><hr />
-                            <a style="display: flex;"><p class="gdes">1000gdes</p><p class="us">$20</p></a>
+    
+                        <div class="liste">
+                            <div class="item-list">
+                                <div class="item-img"><img src="images/194.png"></div>
+                                <div class="detail">
+                                   <h1>Création de site web :<span class="m">$100 us</span></h1><br>
+                                   <p >
+                                       Nous réalisons des sites internet modernes combinant une belle présentation tout 
+                                       en conservant clarté et simplicité.
+                                   </p>
+                               </div>
+                             </div>
+    
+                             <div class="item-list">
+                                <div class="item-img"><img src="images/marcketing.png"></div>
+                                <div class="detail">
+                                   <h1>Vidéo de marcketing :<span class="m">$5 us</span></h1><br>
+                                   <p >
+                                       Les visiteurs s’attendent à trouver un contenu lisible, 
+                                       intéressant et bien structuré, une petite video de marcketing.
+                                   </p>
+                               </div>
+                             </div>
+    
+                             <div class="item-list">
+                                <div class="item-img"><img src="images/196.png"></div>
+                                <div class="detail">
+                                   <h1>D'autres petit services :<span class="m">$0.00 us</span></h1><br>
+                                   <p >
+                                      Profitez un peu de nos autres service a faible economie, tels que: création badge, création logo,
+                                      création flyers, etc...
+                                   </p>
+                               </div>
+                             </div>
                         </div>
-
-                        <div class="item">
-                           <div class="of">OFFRES</div>
-                            <center><img src="images/perte de donne.png"></center>
-                            <h1>Pertes accidentelles</h1>
-                            <P>Les données perdues en raison d'erreurs humaines telles que le formatage 
-                               ou la réinstallation de fichiers peuvent être récupérées.</P><hr />
-                            <a class="price" style="display: flex;"><p class="gdes">1500gdes</p><p class="us">$30</p></a>
-                        </div>
-
-                        <div class="item">
-                           <div class="of">Libre</div>
-                            <center><img src="images/telegram.png"></center>
-                            <h1>Vous avez besoin d'aide</h1>
-                            <P>Si vous avez besoin d'aide, n'hesiter pas a me contacter, je serai ravis pour vous guider, rejoignez notre 
-                               chaine sur telegram
-                            </P><hr />
-                            <a style="display: flex;" href="https://t.me/ftechplus"><p class="gdes">Gratuit</p><p class="us">$0.00</p></a>
-                        </div>
-                        
-                        </div>
-                  </section>
-                    <!--fin espace card-->
-                    <section id="liste">
-                    <div class="images">
-                        <img src="images/back1.jpg">
-                    </div>
-
-                    <div class="liste">
-                        <div class="item-list">
-                            <div class="item-img"><img src="images/194.png"></div>
-                            <div class="detail">
-                               <h1>Création de site web :<span class="m">$100 us</span></h1><hr /><br>
-                               <p >
-                                   Nous réalisons des sites internet modernes combinant une belle présentation tout 
-                                   en conservant clarté et simplicité.
-                               </p>
-                           </div>
-                         </div>
-
-                         <div class="item-list">
-                            <div class="item-img"><img src="images/marcketing.png"></div>
-                            <div class="detail">
-                               <h1>Vidéo de marcketing :<span class="m">$5 us</span></h1> <hr /><br>
-                               <p >
-                                   Les visiteurs s’attendent à trouver un contenu lisible, 
-                                   intéressant et bien structuré, une petite video de marcketing.
-                               </p>
-                           </div>
-                         </div>
-
-                         <div class="item-list">
-                            <div class="item-img"><img src="images/196.png"></div>
-                            <div class="detail">
-                               <h1>D'autres petit services :<span class="m">$0.00 us</span></h1><hr /><br>
-                               <p >
-                                  Profitez un peu de nos autres service a faible economie, tels que: création badge, création logo,
-                                  création flyers, création affiche, carte de visite
-                               </p>
-                           </div>
-                         </div>
-                    </div>
-                    </section>
+                        </section>
                     <section>
                          <!--bar d'annonces de mon site sur mes service de reparation windows-->
                      <div class="bar">
@@ -513,6 +555,107 @@
                          </div>
                     </section>
               </div>
+              <aside>
+                  <div class="block">
+                      <div class="block-header">
+                        <h1>Abonnez-vous, Maintenant</h1>
+                      </div>
+                      <div class="block-content">
+                        <div class="email">
+                            <p>
+                                Recevez une de nos produit gratuitement
+                            </p>
+                                 <!--Update the URL for thank you page on form submit -->
+                                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+                                onload="if(submitted) {window.location='http://zerobudget.club/';}"></iframe> 
+                                
+                                <!-- Update the Google forms URL in action-->
+                            <form id="contact" action="https://docs.google.com/forms/d/e/1FAIpQLSdYcwuVIa_vhLRglEmj6rvHxE7qYyw-UA31lrrFIBZIr0gzDQ/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm(); ">
+                                <input type="text" name="email" />
+                                <center><input type="submit" value="Télécharger ce pack" class="button-blue"></center>
+                            </form>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="block">
+                    <div class="block-header">
+                      <h1>Produitd le plus récents</h1>
+                    </div>
+                    <div class="block-content">
+                      <div class="details" style="display: flex;">
+                          <div><img src="produits/images/Slide1.JPG"></div>
+                          <div>
+                            <p>
+                                <span>
+                                    vidéo compteur d'assemblage de logo, très efficace
+                                </span>
+                            </p>
+                          </div>
+                      </div>
+                      <div style="display: flex; margin: auto; width: max-content;">
+                          <p style="border: 1px solid red; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">HTG 50</p>
+                          <p style="border: 1px solid orange; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">$1</p>
+                          <p style="border: 1px solid orangered; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">10 000 FTP</p>
+                          <a href="produits/assemblage_de_logo.html"><p style="border: 1px solid blue; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px; ">Acheter</p></a>
+                      </div>
+                    </div>
+                    <div class="block-content">
+                        <div class="details" style="display: flex;">
+                            <div><img src="images/201.jpg"></div>
+                            <div>
+                              <p>
+                                  <span>
+                                    Les 4 planete en mouvement de rotation autour du soleil, intro pour reseau sociaux
+                                  </span>
+                              </p>
+                            </div>
+                        </div>
+                        <div style="display: flex; margin: auto; width: max-content;">
+                            <p style="border: 1px solid red; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">HTG 50</p>
+                            <p style="border: 1px solid orange; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">$1</p>
+                            <p style="border: 1px solid orangered; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">10 000 FTP</p>
+                            <a href="produits/univers.html"><p style="border: 1px solid blue; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px; ">Acheter</p></a>
+                        </div>
+                      </div>
+                      <div class="block-content">
+                        <div class="details" style="display: flex;">
+                            <div><img src="produits/images/intro1.jpg"></div>
+                            <div>
+                              <p>
+                                  <span style="line-break: 8px;">
+                                    intro imple avec deux slides plus les reseaux sociaux
+                                  </span>
+                              </p>
+                            </div>
+                        </div>
+                        <div style="display: flex; margin: auto; width: max-content;">
+                            <p style="border: 1px solid red; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">HTG 50</p>
+                            <p style="border: 1px solid orange; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">$1</p>
+                            <p style="border: 1px solid orangered; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">10 000 FTP</p>
+                            <a href="produits/intrologo.html"><p style="border: 1px solid blue; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px; ">Acheter</p></a>
+                        </div>
+                      </div>
+                      <div class="block-content">
+                        <div class="details" style="display: flex;">
+                            <div><img src="produits/images/intro4.jpg"></div>
+                            <div>
+                              <p>
+                                  <span>
+                                    Representer votre chainet avec une presenation simplet et comprehensif
+                                  </span>
+                              </p>
+                            </div>
+                        </div>
+                        <div style="display: flex; margin: auto; width: max-content;">
+                            <p style="border: 1px solid red; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">HTG 50</p>
+                            <p style="border: 1px solid orange; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">$1</p>
+                            <p style="border: 1px solid orangered; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px;">10 000 FTP</p>
+                            <a href="produits/intro_de_presentation.html"><p style="border: 1px solid blue; padding: 3px; font-size: 12px; margin:1px 2px 2px 2px; ">Acheter</p></a>
+                        </div>
+                      </div>
+                    </div>
+              </aside>
           </div>
           <footer>
             <h1>ftechplus</h1>
@@ -618,5 +761,8 @@
                     }
                     document.onmousedown=no
                     </script>
+                   
+                   <script src="js/pop.js"></script>
+                   <script src="js/script.js"></script>
     </body>
 </html>
