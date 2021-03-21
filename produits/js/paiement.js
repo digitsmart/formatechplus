@@ -12,30 +12,6 @@
 
 
             };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-
-            var insert = document.getElementById('insert');
-            insert.addEventListener("click",function(){
-                var number = document.getElementById('number').value;
-                var montant = document.getElementById('montant').value;
-                var prix = document.getElementById('prix').value;
-                var msg = document.getElementById('msg');
-                if(number == ""){
-                    document.getElementById('msg').innerHTML="Veuillez entrer code d'accès";
-                }
-                if(montant < prix){
-                    document.getElementById('msg').innerHTML="Le prix de ce produit est" +" "+  prix +  " "+ "FTP";
-                }else{
-                    firebase.database().ref(number).update({
-                    NUMBER: number,
-                    BALANCE: montant - prix,
-                })
-
-                }
-
-
-            })
 
             document.getElementById('clean').onclick = function(){
 

@@ -247,7 +247,7 @@ article .paiment{
     left: -3%;
     right: 0%;
     width: 660px;
-    height: max-content;
+    height: auto;
     border: 2px solid orange;
     overflow: hidden;
 }

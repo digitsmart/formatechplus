@@ -67,6 +67,8 @@
                                     <button href="" id="achter" class="a" onclick="achter()"><p>Acheter avec FTP</p></button>
                                 </div>
                             </div>
+
+                            <!--formulaire de paiment-->
                             <div class="paiment" id="paiment">
                                 <div id="formation" style="margin: 2em; background-color: black;">
                                     <h1 style="font-size: 20px;">Methode de paiemnt</h1>
@@ -94,8 +96,8 @@
                                             <h1>Votre paiement avec FTP</h1>
                                             <div class="prix">
                                                 <input type="text" value="le prix est :" class="prix1" disabled>
-                                                <input type="text" value="500" id="prix" style="background-color: orange; color: white; text-align: center;" disabled>
-                                                <input type="text" value="FTP" class="prix1" style="width: fit-content;" disabled>
+                                                <input type="text" value="1000" id="prix" style="background-color: orange; color: white; text-align: center;" disabled>
+                                                <input type="text" value="FTP" class="prix1" disabled>
                                             </div>
                                             <hr/>
                                             <p id="msg"></p>
@@ -124,6 +126,7 @@
                                     </center>
                                 </div>
                             </div>
+                            <!--fin de paiement-->
                         </article>
                         <div class="reseau">
                                 <center>
@@ -295,6 +298,35 @@
                     div1.style.display = 'block';
                   }
                 }
+               </script>
+               <script>
+                    // Initialize Firebase
+                    firebase.initializeApp(firebaseConfig);
+
+                        var insert = document.getElementById('insert');
+                        insert.addEventListener("click",function(){
+                            var number = document.getElementById('number').value;
+                            var montant = document.getElementById('montant').value;
+                            var prix = document.getElementById('prix').value;
+                            var msg = document.getElementById('msg');
+                            var fich = document.getElementById('fichier');
+                            var forma = document.getElementById('form');
+                            if(number == ""){
+                                document.getElementById('msg').innerHTML="Veuillez entrer code d'accès";
+                            }
+                            if(montant < prix){
+                                document.getElementById('msg').innerHTML="Le prix de ce produit est" +" "+  prix +  " "+ "FTP";
+                            }else{
+                                firebase.database().ref(number).update({
+                                NUMBER: number,
+                                BALANCE: montant - prix,
+                                
+                            })
+                                window.location="https://drive.google.com/uc?export=download&id=1a11XnIVNWMmVi3aXs4r7k2ktcEe9NBM5";
+                            }
+
+
+                        })
                </script>
     </body>
 </html>
