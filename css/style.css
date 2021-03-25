@@ -55,7 +55,7 @@
     display: none;
   }
   .header{
-    background: url('../images/Univers\ intro.gif') no-repeat;
+    background: url('../images/back2.jpg') no-repeat;
     background-size: cover;
     height: 100vh;
     overflow: hidden;
@@ -70,29 +70,43 @@
       margin-bottom: 2px;
   }
   .header-item img{
-    width: 100%;
-    height: 340px;
-    margin-top: 1em;
+    width: 50%;
+    height: 50%;
+    margin-top: 2em;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  @keyframes example {
+    0%   {border-color:red; left:0px; top:0px;}
+    25%  {border-color:yellow; left:200px; top:0px;}
+    50%  {border-color:blue; left:200px; top:200px;}
+    75%  {border:green; left:0px; top:200px;}
+    100% {border:red; left:0px; top:0px;}
+  }
+  .whatsapp{
+    width: 32px;
+    height: 32px;
+    background-color: green;
   }
   .header-item{
       width: 100%;
       height: max-content;
-      margin-top: 1em;
-      padding-bottom: 1em;
+      margin-top: 2em;
+      padding-bottom: -1em;
       display: inline-block;
       overflow: hidden;
       margin: 1em;
-      background-color: rgb(255, 255, 255, 0.7);;
   }
   .header-content #header-item1{
       margin-top: 2em;
   }
   .item-desc{
-      width: 100%;
+    margin-top: 4em;
       
   }
   .item-desc h1{
-    font-size: 28px;
+    font-size: 60px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -107,6 +121,7 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
   .item-desc p, span{
+    color: black;
       font-size: 18px;
       font-family: 'Times New Roman', Times, serif;
       margin: 1em;
@@ -193,6 +208,7 @@
     border-radius: 10px;
     margin-top: 0.2em;
 }
+
 .card .item{
     width: 100%;
     margin: 0.3em;
@@ -291,6 +307,9 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
 }
 
 .images img{
+  width: 100%;
+}
+.card .ba img{
   width: 100%;
 }
 .item-img img{
@@ -421,7 +440,7 @@ footer{
   height: 100px;
 }
 .header .reseau{
-  margin-top: 3em;
+  margin-top: 1em;
   height: auto;
 }
 .contact{
@@ -515,6 +534,7 @@ input[type=submit]:hover {
   height: max-content;
   background-color: gray;
   box-shadow: 1px 1px 1px black;
+  margin-top: -2em;
 }
 .bar button{
   width: 100%;
