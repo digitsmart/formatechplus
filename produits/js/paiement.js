@@ -12,39 +12,71 @@
 
 
             };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
 
-            document.getElementById('clean').onclick = function(){
+            var insert = document.getElementById('insert');
+            insert.addEventListener("click",function(){
+                var number = document.getElementById('number').value;
+                var montant = document.getElementById('montant').value;
+                var prix = document.getElementById('prix').value;
+                var msg = document.getElementById('msg');
+                var form = document.getElementById("form");
+                var recu = document.getElementById("recu");
+                var i = 0;
+                if(number == ""){
+                    document.getElementById('msg').innerHTML="Veuillez entrer code d'accès";
+                }
+                if(montant < prix){
+                    document.getElementById('msg').innerHTML="Le prix de ce produit est"  +  prix  +  "FTP";
+                }else{
+                    firebase.database().ref(number).update({
+                    NUMBER: number,
+                    BALANCE: montant - prix,
+                });
+                if (i == 0) {
+                    i = 1;
+                    var elem = document.getElementById("myBar");
+                    var width = 1;
+                    var id = setInterval(frame, 10);
+                    function frame() {
+                      if (width >= 100) {
+                        clearInterval(id);
+                        document.getElementById('montant').value = '';
+                        document.getElementById('number').value = '';
+                        document.getElementById('recu').style.display ="block";
+                        document.getElementById('form').style.display ="none";
+                        i = 0;
+                      } else {
+                        width++;
+                        elem.style.width = width + "%";
+                      }
+                    }
+                  }
+               
+                }
 
-                        document.getElementById("insert").style.display="none";
-                        document.getElementById("clean").style.display="none";
-                        document.getElementById("select").style.display="block";
-                        document.getElementById('montant').value = "";
-                        document.getElementById('number').value = "";
-            }
+
+            })
 
             //............................ready data....................
-            var numberV, montantV, prix, insert;
+            var numberV, montantV, prix;
 
             function Ready(){
                 numberV = document.getElementById('number').value;
                 montantV = document.getElementById('montant').value;
-                insertV = document.getElementById('insert');
-                insertV = document.getElementById('select');
-                insertV = document.getElementById('clean');
             }
             //...........................select data.........................
             document.getElementById('select').onclick = function(){
                 if(numberV ==""){
                     document.getElementById('msg').innerHTML="Veuillez entrer votre numero";
-                    
                 }else{
                     
                     Ready();
                         firebase.database().ref(numberV).on('value',function(snapshot){;
                         document.getElementById('montant').value= snapshot.val().BALANCE;
-                        document.getElementById("insert").style.display="block";
-                        document.getElementById("clean").style.display="block";
-                        document.getElementById("select").style.display="none";
+                        document.getElementById("select").disabled = true;
+                        document.getElementById("insert").disabled = false;
                     });
                 }
             }
