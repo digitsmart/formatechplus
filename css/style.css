@@ -721,13 +721,28 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
 
     header .navbar ul li a{
         display: block;
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         border:.2rem solid #fff;
         margin:1rem 0;
     }
 
     .fa-times{
         transform: rotate(180deg);
+    }
+    .home .content h1{
+        font-size: 2rem;
+        color:white;
+    }
+    
+    .home .content p{
+        font-size: 1.8rem;
+        color:white;
+        padding:1rem 0;
+    }
+    
+    .home .content .buttons a:nth-child(2) .btn{
+        background:#444;
+        margin-left: 1rem;
     }
     .feature .box-container{
         display: flex;
@@ -739,6 +754,8 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
     header .navbar.nav-toggle{
         right: 0;
     }
+    
+
     .card{
         display: flex;
         width: 100%;
@@ -794,6 +811,21 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .home .content h1{
+        font-size: 3rem;
+        color:white;
+    }
+    
+    .home .content p{
+        font-size: 1.8rem;
+        color:white;
+        padding:1rem 0;
+    }
+    
+    .home .content .buttons a:nth-child(2) .btn{
+        background:#444;
+        margin-left: 1rem;
     }
     .card{
         display: flex;
@@ -857,6 +889,27 @@ box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
 
     .review .review-slider{
         width:auto;
+    }
+    .home .content h1{
+        font-size: 2.5rem;
+        color:white;
+        text-align: center;
+    }
+    
+    .home .content p{
+        font-size: 13px;
+        color:white;
+        padding:1rem 0;
+        text-align: justify;
+    }
+    
+    .home .content .buttons a:nth-child(2) .btn{
+        background:#444;
+        margin-left: 1rem;
+    }
+
+    .contact .contact-image{
+        width: 100vw;
     }
     .card{
         display: flex;
