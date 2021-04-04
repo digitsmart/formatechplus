@@ -14,7 +14,7 @@
 
     <!-- custom css file link  -->
     <link rel="icon" href="../images/mon logo.ico" type="image/x-icon">
-    <link rel="img" href="https://ftechplus.netlify.app/images/back1.jpg">
+    <link rel="img" href="https://ftechplus.netlify.app/images/back2.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon"  type="image/png" href="images/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Orbitron:700&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
     <meta name="og:title" property="og:title" content="Telecharger des documents informatique et des intro pour votre video.">
     <meta name="robots" content="formation informatique, cours programmtion web en html et css">
     <link rel="canonical" href="images/back1.jpg">
-    <link rel="canonical" href="https://ftechplus.netlify.app/images/back1.jpg">
+    <link rel="canonical" href="https://ftechplus.netlify.app/images/back2.jpg">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://apis.google.com/js/platform.js"></script>
      <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -791,7 +791,7 @@
                 <h3>newsletter</h3>
                 <p>Recevez tous nos mises-a-jours</p>
                 <form action="">
-                    <input type="email" placeholder="enter your email">
+                    <input type="email" id="email" placeholder="enter your email">
                     <button class="fas fa-paper-plane"></button>
                 </form>
             </div>
@@ -803,30 +803,44 @@
     </section>
 
     <!-- footer section ends -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
+    authDomain: "maliste-d4c03.firebaseapp.com",
+    databaseURL: "https://maliste-d4c03.firebaseio.com",
+    projectId: "maliste-d4c03",
+    storageBucket: "maliste-d4c03.appspot.com",
+    messagingSenderId: "552655235785",
+    appId: "1:552655235785:web:a4b660caf5882e4be57b18",
+    measurementId: "G-V6R9FPCSG1"
+
+ };
+ // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+    var emailV;
+
+function insert() {
+   emailV = document.getElementById('email').value;
+   var write =document.getElementById('write');
+   var valide =document.getElementById('valide');
+ 
+   if (emailV ==""){
+    document.getElementById('msgmail').innerHTML="Veuillez entrer votre email";
+   }else{
+    firebase.database().ref("Abonnezsite/" +emailV).set({
+      Email: emailV,
+  });
+   }
+ 
+    }
+     
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script>
 <!-- jquery cdn link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
