@@ -1,0 +1,75 @@
+form{
+    border: 2px solid;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    background-color: rgb(86, 135, 241);
+}
+
+form .form_gauche{
+    display: none;
+    width: 50%;
+    height: auto;
+    border: 1px solid;
+    margin-bottom: 2px;
+}
+.box{
+    margin: auto;
+    width: 50%;
+    height: auto;
+    padding: 1em;
+    background-color: blue;
+}
+.box .groupe{
+    display: flex;
+    height: 60px;
+}
+.box .input{
+    width: 100%;
+    margin: 0.2em;
+    padding: 0.1em;
+    border-bottom: 1px solid;
+}
+.box select{
+    width: 95%;
+    height: 30px;
+    margin: 0.2em;
+    padding: 0.5em;
+    background-color: none;
+    border: 0px;
+}
+.box input{
+    width: 95%;
+    height: 20px;
+    margin: 0.2em;
+    padding: 0.5em;
+    background-color: none;
+    border: 0px;
+} 
+#valide{
+    display: none;
+    width: 70%;
+    height: auto;
+    margin: 1em auto;
+}
+#valide img{
+    width: 50%;
+    height: auto;
+    margin: 1em auto;
+}
+.box h1{
+    color: white;
+    text-align: center;
+}
+.box p{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+.box p span{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
