@@ -1,0 +1,335 @@
+<html>
+	<head>
+	<title></title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Mukta+Mahee:200,400');
+		
+		body { background: #52c1f7; }
+		* { box-sizing: border-box; }
+		
+		.container {
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 1em;
+		}
+		
+		ul {
+		list-style: none;
+		padding: 0;
+		}
+		
+		.title {
+		margin-bottom: 30px;
+		font-family: 'Mukta Mahee', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		color: #fff;
+		text-align: center;
+		}
+		
+		.wrapper {
+		background: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 20px 0 rgba(0,0,0, .1);
+		padding: 27.5px;
+		}
+		
+		#contactForm {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-areas:
+		'name'
+		'email'
+		'company'
+		'phone'
+		'message';
+		}
+		
+		.required-field {
+		grid-column: 1 / 2;
+		}
+		
+		.submit-button {
+		grid-column: 2 / 3;
+		}
+		
+		.name-field {
+		grid-area: name;
+		grid-column: 1 / 3;
+		}
+		
+		.email-field {
+		grid-area: email;
+		grid-column: 1 / 3;
+		}
+		
+		.company-field {
+		grid-area: company;
+		grid-column: 1 / 3;
+		}
+		
+		.phone-field {
+		grid-area: phone;
+		grid-column: 1 / 3;
+		}
+		
+		.message-field {
+		grid-area: message;
+		grid-column: 1 / 3;
+		}
+		
+		/* FORM STYLES */
+		
+		.contact-us {
+		margin: 0 0 30px;
+		font-family: 'Mukta Mahee', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		color: #5dc3f2;
+		}
+		
+		.contact form {
+		border: 0;
+		}
+		
+		.contact form label {
+		display: block;
+		}
+		
+		.contact form p {
+		margin: 0;
+		font-family: 'Mukta Mahee', sans-serif;
+		font-weight: 200;
+		font-size: 12px;
+		color: rgba(74, 86, 96, 1);
+		}
+		
+		.contact form input, .contact form textarea {
+		font-family: 'Mukta Mahee', sans-serif;
+		font-weight: 200;
+		font-size: 14px;
+		width: 100%;
+		padding: .4em .8em;
+		background: rgba(249, 250, 250, .5);
+		border: 1px solid rgba(74, 86, 96, .1);
+		border-radius: 2.5px;
+		outline-color: #5dc3f2;
+		}
+		
+		.contact form button {
+		font-family: 'Mukta Mahee', sans-serif;
+		font-weight: 400;
+		font-size: 12px;
+		color: #fff;
+		background: #5dc3f2;
+		width: 90px;
+		height: 30px;
+		border: 0;
+		border-radius: 15px;
+		}
+		
+		.submit-button {
+		align-self: center;
+		justify-self: end;
+		}
+		
+		.contact form button:hover, .contact form button:focus {
+		background: #49b0e7;
+		color: #fff;
+		outline: 0;
+		transition: background-color 0.3s ease-out;
+		}
+		
+		.required-field {
+		font-family: 'Mukta Mahee', sans-serif;
+		font-weight: 200;
+		font-size: 10px;
+		color: rgba(74, 86, 96, 0.75);
+		align-self: center;
+		justify-self: start;
+		}
+		
+		span {
+		color: #5dc3f2;
+		}
+		
+		.alert {
+		margin-bottom: 1em;
+		padding: 10px;
+		background: #49b0e7;
+		font-family: 'Mukta Mahee', sans-serif;
+		font-size: 14px;
+		text-align: center;
+		color: #fff;
+		border-radius: 2.5px;
+		display: none;
+		}
+		header{
+			background-image: url('images/univers.gif');
+			height: 100px;
+			width: 99%;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#recu{
+			display: none;
+			border: 1px solid blue;
+			width: 100%;
+			padding: 1em;
+			box-shadow: 2px -1px 5px 0px rgba(0,0,0,0.75);
+			-webkit-box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.75);
+		}
+		#recu h1{
+			font-size: 20px;
+			text-align: center;
+			color: blue;
+		}
+		#recu h2{
+			font-size: 16px;
+			text-align: center;
+			color: orangered;
+		}
+		#recu {
+			font-size: 14px;
+			text-align: center;
+			color: black;
+		}
+		#recu a{
+			text-decoration: none;
+			padding: 0.2em;
+			border: 1px solid orange;
+		}
+		/* LARGE SCREENS */
+		
+		@media (min-width: 500px) {
+		#contactForm {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+		'name company'
+		'email phone'
+		'message message';
+		}
+		
+		.name-field {
+		grid-area: name;
+		grid-column: 1 / 2;
+		}
+		
+		.email-field {
+		grid-area: email;
+		grid-column: 1 / 2;
+		}
+		
+		.company-field {
+		grid-area: company;
+		grid-column: 2 / 3;
+		}
+		
+		.phone-field {
+		grid-area: phone;
+		grid-column: 2 / 3;
+		}
+		
+		.message-field {
+		grid-area: message;
+		grid-column: 1 / 3;
+		}
+		}
+		
+	</style>
+	</head>
+	<body>
+		<div class="container">
+		<header>
+			<h1 class="title">
+				Cours html et css sur whatspp et telegram gratuit
+			</h1>
+		</header>
+		
+		<div class="wrapper animated bounceInLeft">
+		<div class="contact">
+		<form id="form">
+			<div class="groupe">
+				<p class="name-field">
+					<label>Votre Nom :<span>*</span></label>
+					<input type="text" name="name" id="name" required>
+					</p>
+			</div>
+			<div class="groupe">
+				<p class="email-field">
+					<label>Votre Email : <span>*</span></label>
+					<input type="email" name="email" id="email" required>
+					</p>
+			</div>
+			
+			<div class="groupe" style="display: flex;">
+				<p class="phone-field" style=" margin-left: 0em; width: 70px;">
+					<label>Code</label>
+					<input type="text" name="phone" id="code" placeholder="+509" required >
+				</p>
+				<p class="phone-field" style=" margin-left: 0.2em; width: 100%;">
+					<label>Votre Numéro avec le code du pays</label>
+					<input type="text" name="phone" id="phone">
+				</p>
+			</div>
+		<button type="button" onclick="insert()">Submit</button>
+		</form>
+		<div class="recu" id="recu">
+			<h1>Suivre nos cours dès maintenant</h1>
+			<h2>Votre incription est un succès pour nous!</h2><hr />
+			<p>
+				Cours de programmation web sur android,100% gratuit<br>
+				al fin de la formation vous aurez un certificat et c'est toujour gratuit
+			</p>
+		   <center> 
+			   <a class="btn" href="https://chat.whatsapp.com/DoZF8oSOQLJGvNsBJuNQL1">
+			   Commencer a Suivre le cours
+				</a>
+		   </center>
+		</div>
+		</div>
+		</div>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+		<script type="text/javascript">
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
+				authDomain: "maliste-d4c03.firebaseapp.com",
+				databaseURL: "https://maliste-d4c03.firebaseio.com",
+				projectId: "maliste-d4c03",
+				storageBucket: "maliste-d4c03.appspot.com",
+				messagingSenderId: "552655235785",
+				appId: "1:552655235785:web:a4b660caf5882e4be57b18",
+				measurementId: "G-V6R9FPCSG1"
+			};
+			firebase.initializeApp(config);
+			// Function to get form value
+			var codeV, nameV, emailV, phoneV;
+
+		function insert() {
+			nameV = document.getElementById('name').value;
+			emailV = document.getElementById('email').value;
+			phoneV = document.getElementById('phone').value;
+			codeV = document.getElementById('code').value;
+			var recu= document.getElementById('recu');
+			var form = document.getElementById('form');
+		firebase.database().ref(nameV).set({
+			NAME: nameV,
+			Mail: emailV,
+			CODE: codeV,
+			NUMBER: phoneV,
+		});
+		document.getElementById('recu').style.display ="block";
+        document.getElementById('form').style.display ="none";
+
+
+	}	
+		</script>
+	</body>
+</html>
