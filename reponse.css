@@ -1,4 +1,14 @@
+header{
+    height: 300px;
+    width: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid;
+    margin: auto;
+    background-image: url('images/bannere.jpg');
+}
 form{
+    display: none;
     border: 2px solid;
     align-items: center;
     width: 70%;
@@ -72,4 +82,99 @@ form .form_gauche{
     color: white;
     font-size: 18px;
     text-align: center;
+}
+
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    header{
+        height: 300px;
+        width: 110%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid;
+        margin: auto;
+        background-image: url('images/bannere.jpg');
+    }
+    form{
+        border: 2px solid;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        background-color: rgb(86, 135, 241);
+    }
+	.box{
+        width: 90%;
+    }
+
+}
+@media screen and (max-width: 767px) {
+	header{
+        height: 300px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid;
+        margin: auto;
+        background-image: url('images/bannere.jpg');
+    }
+    form{
+        display: none;
+        border: 2px solid;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        background-color: red;
+    }
+    .box{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 575px) {
+    header{
+        height: 300px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid;
+        margin: auto;
+        background-image: url('images/bannere.jpg');
+    }
+    form{
+        display: none;
+        border: 2px solid;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        background-color: rgb(0, 18, 58);
+    }
+
+    .box{
+        display: inline-block;
+        width: 100%;
+    }
+    .box .groupe{
+        border: yellow 2px solid;
+        width: 90%;
+        height: auto;
+        padding-right: 1em;
+       display: inline-block;
+       margin: 1em;
+       overflow: hidden;
+    }
+    .box select{
+        width: 100%;
+    }
+    .box .input{
+        width: 100%;
+       
+    }
+    .box .input input{
+        width: 97%;
+    }
 }

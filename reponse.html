@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>paiement</title>
+        <title>Formulaire </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="reponse.css">
-        <script src="reponse.js"></script>
+        <script src="repe.js"></script>
     </head>
     <body>
         <div class="block">
+            <header>
+                
+            </header>
             <div id="valide">
               <center>
                 <img src="images/valide.jpg">
@@ -44,6 +47,9 @@
                             <div class="groupe">
                                 <div class="input">
                                     <input type="mail" id="email" placeholder="email">
+                                </div>
+                                <div class="input">
+                                    <input type="mail" id="emailSociete" placeholder="email de votre société">
                                 </div>
                             </div>
 
@@ -338,7 +344,7 @@
                                 </div>
                             </div>
                             <div class="bar-btn">
-                                <button style="padding: 1.3em; border: 1px solid blue;" type="button" onclick="insert();">Envoyer votre demande</button>
+                                <button type="button" id="insert" onclick="insert()">Envoyer votre demande</button>
                             </div>
                     </div>
                 </form>
@@ -366,7 +372,48 @@
      // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
+    var prenomV, nameV, emailV, numberV, adresseV, countryV, villeV, serviceV, planV,;
+var insert =document.getElementById('insert');
+function insert() {
+  prenomV = document.getElementById('prenom').value;
+   nameV = document.getElementById('name').value;
+   emailV = document.getElementById('email').value;
+   numberV = document.getElementById('number').value;
+   countryV = document.getElementById('country').value;
+   villeV = document.getElementById('ville').value;
+   adresseV = document.getElementById('adresse').value;
+   serviceV = document.getElementById('service').value;
+   planV = document.getElementById('plan').value;
+   var write =document.getElementById('write');
+   var valide =document.getElementById('valide');
+   if (nameV ==""){
+    document.getElementById('msgmail').innerHTML="Veuillez entrer votre nom";
+   }
+   if (numberV ==""){
+    document.getElementById('msgmail').innerHTML="Veuillez entrer votre numero";
+   }
+   if (emailV ==""){
+    document.getElementById('msgmail').innerHTML="Veuillez entrer votre email";
+   }
+   if (countryV ==""){
+    document.getElementById('msgmail').innerHTML="Veuillez selectionner votre pays";
+   }else{
+    firebase.database().ref("MonTravail/" +prenomV).set({
+      BPrenom: prenomV,
+      ANom: nameV,
+      CEmail: emailV,
+      DPays: countryV,
+      ENumero: numberV,
+      FVille: villeV,
+      GAdresse: adresseV,
+      HTravail : serviceV,
+      IPlan: planV,
+  });
+  document.getElementById('write').style.display = "none";
+  document.getElementById('valide').style.display = "block";
+   }
+
 </script>
-<script type="text/javascript" src="reponse.js"></script>
+<script type="text/javascript" src="rep.js"></script>
     </body>
 </html>

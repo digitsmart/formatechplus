@@ -1,31 +1,5 @@
-function myFunction() {
-  var x = document.getElementById("write");
-  var y = document.getElementById("read");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    y.style.display = "none";
-  } else {
-    x.style.display = "block";
-    y.style.display = "none";
-  }
-  } 
-
-  function hide() {
-      var x = document.getElementById("write");
-      var y = document.getElementById("read");
-      if (y.style.display === "none") {
-        y.style.display = "block";
-        x.style.display = "none";
-      } else {
-        y.style.display = "block";
-        x.style.display = "none";
-      }
-      }
-
-  
-
-var codeV, nameV, emailV, numberV, adresseV, countryV, villeV, serviceV, planV, imagesV;
-
+var prenomV, nameV, emailV, numberV, adresseV, countryV, villeV, serviceV, planV,;
+var insert =document.getElementById('insert');
 function insert() {
   prenomV = document.getElementById('prenom').value;
    nameV = document.getElementById('name').value;
@@ -36,7 +10,6 @@ function insert() {
    adresseV = document.getElementById('adresse').value;
    serviceV = document.getElementById('service').value;
    planV = document.getElementById('plan').value;
-   imagesV = document.getElementById('images').value;
    var write =document.getElementById('write');
    var valide =document.getElementById('valide');
    if (nameV ==""){
@@ -61,7 +34,6 @@ function insert() {
       GAdresse: adresseV,
       HTravail : serviceV,
       IPlan: planV,
-      JImages: imagesV,
   });
   document.getElementById('write').style.display = "none";
   document.getElementById('valide').style.display = "block";
