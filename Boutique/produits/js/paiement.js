@@ -80,3 +80,53 @@
                     });
                 }
             }
+
+
+
+
+
+        var mail, nom, pphone, date, code;
+    function enregistrer() {
+    phone = document.getElementById('phone').value;
+    mail = document.getElementById('mail').value;
+    nom = document.getElementById('nom').value;
+    code = document.getElementById('code').value;
+    date = document.getElementById('date').value;
+    var datesmg =document.getElementById('datesmg');
+    var nomsmg =document.getElementById('nomsmg');
+    var mailsmg =document.getElementById('mailsmg');
+    var codesmg =document.getElementById('codesmg');
+    var phonesmg =document.getElementById('phonesmg');
+    var div = document.getElementById('formation');
+    var div1 = document.getElementById('form');
+    var content = document.getElementById('content');
+    if(date == ""){
+        document.getElementById("datesmg").style.color = "red";
+    }
+    if(nom == ""){
+        document.getElementById("nomsmg").style.color = "red";
+    }
+    if(mail == ""){
+        document.getElementById("mailsmg").style.color = "red";
+    }
+    if(code == ""){
+        document.getElementById("codesmg").style.color = "red";
+    }
+    if(phone == ""){
+        document.getElementById("phonesmg").style.color = "red";
+    }else{
+        firebase.database().ref('0Infospaiment/' +phone).set({
+            Adate: date,
+            BNAME: nom,
+            CCODE: code,
+            DPHONE: phone,
+            CMAIL: mail,
+        });
+        document.getElementById('montant').value = '';
+        document.getElementById('number').value = '';
+        document.getElementById('recu').style.display ="none";
+        document.getElementById('content').style.display ="none";
+        document.getElementById('form').style.display ="block";
+        
+}
+}
