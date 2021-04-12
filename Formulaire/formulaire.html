@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v10 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/montserrat-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			  <!--Update the URL for thank you page on form submit -->
+			  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+			  onload="if(submitted) {window.location='https://drive.google.com/file/d/1Rsma7XJEbcHADPwf0vi8rguA7Aa7FGOs/view?usp=sharing';}"></iframe> 
+			<form class="form-detail" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSeg5EdIuQYE0x8faFLEJwtS3F1loxuCTEMNcFk3eOS5AZsutA/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm();" id="myform">
+				<div class="form-left">
+					<h2>Infomation Generale</h2>
+					<p style="margin: 1em; text-align: center;">
+						<span>
+							Remplir le formulaire et envoyer nous vos documents dans un fichier zip, 
+							tels qu’image, audio, document texte.
+						</span>
+					</p><hr />
+					<div class="form-row" style="display: block;">
+						<select name="entry.255648155" id="title">
+						    <option class="option" value="title">Vous etes ?</option>
+						    <option class="option" value="businessman">Businessman</option>
+						    <option class="option" value="reporter">formateur</option>
+						    <option class="option" value="secretary">Entrepreneur</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="entry.568385221" id="first_name" class="input-text" placeholder="Votre Prenom" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="entry.1299408067" id="last_name" class="input-text" placeholder="Votre Nom" required>
+						</div>
+					</div>
+					<div class="form-row form-group">
+						<select name="entry.1355157607" id="position">
+						    <option value="position">Position</option>
+						    <option value="director">Directeur</option>
+						    <option value="manager">Manager</option>
+						    <option value="employee">Employeur</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+
+						<select name="entry.1330302285" id="option">
+						    <option class="option" value="title">Que voulez-vous ?</option>
+						    <option class="option" value="businessman">Blog</option>
+						    <option class="option" value="reporter">Formulaire</option>
+						    <option class="option" value="secretary">Présentation</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="entry.1904142998" id="first_name" class="input-text" placeholder="Nom compagnie" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="entry.280311971" id="last_name" class="input-text" placeholder="Email compagnie" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-3">
+							<input type="text" name="entry.1475080583" class="business" id="business" placeholder="Quel type de business ?" required>
+						</div>
+						<div class="form-row form-row-4">
+							<select name="entry.2075044114">
+							    <option value="employees">Quel niveau ?</option>
+							    <option value="trainee">Basic</option>
+							    <option value="colleague">Standard</option>
+							    <option value="associate">Prémium</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						  <div class="form-row form-row-3">
+							<select class="form-input" id="level" name="entry.1380964475">
+								<option value="employees">Pouvez-vous le gerer ?</option>
+								<option value="B">Non, j'ai besoin d'aide</option>
+								<option value="I">Oui, je peux le faire</option>
+							  </select>
+						</div>
+						<div class="form-row form-row-3">
+							<input type="file" id="myFile"  name="entry.167094342">
+						</div>
+					</div>
+				</div>
+				<div class="form-right">
+					<h2>Contact Details</h2>
+					<div class="form-row">
+						<input type="text" name="entry.2083042220" class="street" id="street" placeholder="Street + Nr" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="entry.1398120939" class="additional" id="additional" placeholder="Additional Information" required>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="entry.946083026" class="zip" id="zip" placeholder="Zip Code" required>
+						</div>
+						<div class="form-row form-row-2">
+							<select name="entry.1815086099">
+							    <option value="place">Place</option>
+							    <option value="Street">Rue</option>
+							    <option value="District">District</option>
+							    <option value="City">Ville</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+					<div class="form-row">
+						<select name="entry.1541360680">
+						    <option value="country">Country</option>
+						    <option value="Vietnam">Haiti</option>
+						    <option value="Malaysia">Canada</option>
+						    <option value="India">France</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="entry.1178423466" class="code" id="code" placeholder="Code +" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="entry.65598451" class="phone" id="phone" placeholder="Votre Numero" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<input type="text" name="entry.727047859" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
+					</div>
+					<div class="form-checkbox">
+						<label class="container"><p>J'accepte les  <a href="#" class="text">Termes et les conditions</a> de votre site.</p>
+						  	<input type="checkbox" name="entry.1264247219">
+						  	<span class="checkmark"></span>
+						</label>
+					</div>
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Register Badge">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://ftechplus.netlify.app) -->
+</html>
