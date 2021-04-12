@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>paiement</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="paiment.css">
+        <script src="paiement.js"></script>
+    </head>
+    <body>
+        <!---------------------Formulaire de paiement en ftp----------------------------------->
+        <div id="b">
+            <div class="block">
+                <div class="form">
+                        <!--pour le code d'acces-->
+                        <div class="groupe">
+                            <h1>Votre paiement avec FTP</h1>
+                            <div class="prix">
+                                <input type="text" value="le prix est :" class="prix1" disabled>
+                                <input type="text" value="100" id="prix" disabled>
+                                <input type="text" value="FTP" class="prix1" disabled>
+                            </div>
+                            <hr/>
+                            <p id="msg"></p>
+                            <div class="input">
+                              <input type="text" id="number">
+                            </div>
+                            <div class="input" style="display: flex; color: blue;">
+                                <div><p>Vous avez</p></div>
+                                <input type="montant" id="montant" disabled>
+                                <div><p>FTP</p></div>
+                            </div>
+                        </div>
+                        <div class="bar-btn">
+                            <button id="select"><img src="mon logo.png">balance</button>
+                            <button id="insert"><img src="mon logo.png"> Payer</button>
+                        </div>
+                        <button id="clean" onclick="document.getElementById('montant').value = ''">Nettoyer les champs</button>
+                </div>
+            </div>
+        </div>
+        <!---script-->
+        <div class="seript">
+        <!--------------------- Fin Formulaire de paiement en ftp----------------------------->
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+            <script src="paiement.js"></script>
+
+    </body>
+</html>

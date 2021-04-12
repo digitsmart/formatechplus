@@ -1,0 +1,36 @@
+.body{
+    background-color: blue;
+    margin: 0px;
+    padding: 25px;
+    height: 100vh;
+}
+
+form{
+    background-color: white;
+    width: 55%;
+    align-items: center;
+    margin: 25px auto;
+    border: orangered 2px solid;
+}
+
+.horizon{
+    display: flex;
+}
+
+.horizon .input{
+    width: 40%;
+    margin:5px auto;
+    align-items: center;
+}
+.horizon .input input{
+    width: 100%;
+    padding: 0.4em;
+    margin: auto;
+    align-items: center;
+}
+.horizon .input select{
+    width: 100%;
+    padding: 0.4em;
+    margin: auto;
+    align-items: center;
+}
