@@ -313,6 +313,7 @@ article .header-article .images{
     width: 100%;
 }
 .quantity {
+    width: 100%;
     display: flex;
     justify-content: left;
     margin-bottom: 0.2em;
@@ -332,7 +333,7 @@ article .header-article .images{
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     text-align: center;
-    width: 100%;
+    width: auto;
     font-size: 20px;
     color: #000;
     font-weight: 300;
