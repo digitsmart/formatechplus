@@ -85,13 +85,14 @@
 
 
 
-        var mail, nom, pphone, date, code;
+        var mail, nom, pphone, date, code, quantity;
     function enregistrer() {
     phone = document.getElementById('phone').value;
     mail = document.getElementById('mail').value;
     nom = document.getElementById('nom').value;
     code = document.getElementById('code').value;
     date = document.getElementById('date').value;
+    quantity = document.getElementById('quantity').value;
     var datesmg =document.getElementById('datesmg');
     var nomsmg =document.getElementById('nomsmg');
     var mailsmg =document.getElementById('mailsmg');
@@ -121,6 +122,7 @@
             CCODE: code,
             DPHONE: phone,
             CMAIL: mail,
+            NMBArticle: quantity,
         });
         document.getElementById('montant').value = '';
         document.getElementById('number').value = '';
@@ -130,3 +132,61 @@
         
 }
 }
+
+
+
+
+
+ //setting default attribute to disabled of minus button
+ document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+
+ //taking value to increment decrement input value
+ var valueCount
+
+ //taking price value in variable
+ var price = document.getElementById("prix").innerText;
+
+ //price calculation function
+ function priceTotal() {
+     var total = valueCount * price;
+     document.getElementById("prix").innerText = total
+ }
+
+ //plus button
+ document.querySelector(".plus-btn").addEventListener("click", function() {
+     //getting value of input
+     valueCount = document.getElementById("quantity").value;
+
+     //input value increment by 1
+     valueCount++;
+
+     //setting increment input value
+     document.getElementById("quantity").value = valueCount;
+
+     if (valueCount > 1) {
+         document.querySelector(".minus-btn").removeAttribute("disabled");
+         document.querySelector(".minus-btn").classList.remove("disabled")
+     }
+
+     //calling price function
+     priceTotal()
+ })
+
+ //plus button
+ document.querySelector(".minus-btn").addEventListener("click", function() {
+     //getting value of input
+     valueCount = document.getElementById("quantity").value;
+
+     //input value increment by 1
+     valueCount--;
+
+     //setting increment input value
+     document.getElementById("quantity").value = valueCount
+
+     if (valueCount == 1) {
+         document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+     }
+
+     //calling price function
+     priceTotal()
+ })
