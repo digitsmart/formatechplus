@@ -285,7 +285,7 @@ le menu de mon site se trouve juste ici
     }
   }
  /* reponsive de mon site des articles*/
-@media (max-width:991px){
+@media (max-width:1174px){
     
     .container{
         width: 100%;
@@ -294,6 +294,28 @@ le menu de mon site se trouve juste ici
     .content{
         display: flex;
         width: 100%;
+    }
+    .main{
+        width: 98%;
+        margin: auto;
+        margin-right: 10px;
+    }
+    .main section{
+        width: 100%;
+    }
+    .mail .form form{
+        width: auto;
+    }
+    .mail .form form .groupe{
+        margin:0.4em auto;
+        width: 50%;
+    }
+    .mail .form form input{
+        margin:0.4em auto;
+        width: 95%;
+    }
+    .form form .groupe{
+        display: block;
     }
 }
 
@@ -326,6 +348,24 @@ le menu de mon site se trouve juste ici
     aside{
         display: none;
     }
+    .main{
+        width: 98%;
+        margin: auto;
+        margin-right: 10px;
+    }
+    .main section{
+        width: 100%;
+    }
+    .mail .form form{
+        width: auto;
+    }
+    .mail .form form input{
+        margin:0.4em auto;
+        width: 95%;
+    }
+    .form form .groupe{
+        display: block;
+    }
 }
 
 @media (max-width:500px){
@@ -354,6 +394,19 @@ le menu de mon site se trouve juste ici
         width: 98%;
         margin: auto;
         margin-right: 10px;
+    }
+    .main section{
+        width: 100%;
+    }
+    .mail .form form{
+        width: auto;
+    }
+    .mail .form form input{
+        margin:0.4em auto;
+        width: 95%;
+    }
+    .form form .groupe{
+        display: block;
     }
     aside{
         display: none;
