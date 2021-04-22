@@ -63,6 +63,7 @@ header{
     background-color: white;
 }
 
+
 /* le sidebar de mon site ici
 Bar laterral de mon site se trouve juste la
 */
@@ -101,6 +102,25 @@ aside .block .block-content .section1{
 aside .block .block-content section .item{
     width: 100%;
     padding: 0.3em;
+}
+
+
+footer{
+    background-color: black;
+    width: 91%;
+    height: 150px;
+    margin: auto;
+}
+footer .autor{
+    width: 30%;
+    position: relative;
+    margin: auto;
+    border: 2px solid;
+    color: white;
+    top: 50%;
+}
+footer .autor p{
+    text-align: center;
 }
 
 /*---------------------------*/
