@@ -75,7 +75,7 @@ function userClicked(e) {
         e.preventDefault();
         var url = this.getAttribute('data-url');
         var shareUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(document.title) +
-            "&via=Grafikart_fr" +
+            "&via=ftechplus" +
             "&url=" + encodeURIComponent(url);
         popupCenter(shareUrl, "Partager sur Twitter");
     });
