@@ -10,6 +10,7 @@
 		
 		.container {
 		max-width: 700px;
+		margin-top: 3em;
 		margin-left: auto;
 		margin-right: auto;
 		padding: 1em;
@@ -21,11 +22,13 @@
 		}
 		
 		.title {
-		margin-bottom: 30px;
-		font-family: 'Mukta Mahee', sans-serif;
-		font-weight: 400;
-		font-size: 16px;
+		margin-top: 0.1em;
+		margin-bottom: 1px;
+		font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-weight: bold;
+		font-size: 20px;
 		color: #fff;
+		text-shadow: 0px 0px 1px 8px black;
 		text-align: center;
 		}
 		
@@ -106,7 +109,7 @@
 		color: rgba(74, 86, 96, 1);
 		}
 		
-		.contact form input, .contact form textarea {
+		.contact form input, .contact form textarea, select {
 		font-family: 'Mukta Mahee', sans-serif;
 		font-weight: 200;
 		font-size: 14px;
@@ -119,12 +122,12 @@
 		}
 		
 		.contact form button {
-		font-family: 'Mukta Mahee', sans-serif;
+		font-family: 'Mukta Mahee', sans-serif;margin-top: 0.5em;
 		font-weight: 400;
 		font-size: 12px;
 		color: #fff;
 		background: #5dc3f2;
-		width: 90px;
+		width: 100%;
 		height: 30px;
 		border: 0;
 		border-radius: 15px;
@@ -168,10 +171,14 @@
 		}
 		header{
 			background-image: url('images/univers.gif');
-			height: 100px;
+			background-color: black;
+			color: white;
+			height: auto;
 			width: 99%;
+			border: 2px solid red;
 			background-repeat: no-repeat;
 			background-size: cover;
+			overflow: hidden;
 		}
 		#recu{
 			display: none;
@@ -245,47 +252,49 @@
 		<div class="container">
 		<header>
 			<h1 class="title">
-				Cours html et css sur whatspp et telegram gratuit
+				formation en ligne sur whatsapp
 			</h1>
+			<h2 style="font-size: 18px; text-align: center;">
+				Suivez nos formation en ligne sur votre smartphone
+			</h2>
 		</header>
 		
 		<div class="wrapper animated bounceInLeft">
 		<div class="contact">
-		<form id="form">
+			 <!--Update the URL for thank you page on form submit -->
+			 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+			 onload="if(submitted) {window.location='https://cb.run/jsNX';}"></iframe> 
+		<form id="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5TJoUHIx7GZXFTkp59YzLGfJrwtblRQc7fXocc8C8gKglCQ/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm(); ">
 			<div class="groupe">
 				<p class="name-field">
-					<label>Votre Nom :<span>*</span></label>
-					<input type="text" name="name" id="name" required>
+					<label>Votre Nom :<span style="color: red;">*</span></label>
+					<input type="text" name="entry.1589936926" id="name" required>
 					</p>
 			</div>
 			<div class="groupe">
 				<p class="email-field">
-					<label>Votre Email : <span>*</span></label>
-					<input type="email" name="email" id="email" required>
+					<label>Votre Email : <span style="color: red;">*</span></label>
+					<input type="email" name="entry.107750742" id="email" required>
 					</p>
 			</div>
 			
 			<div class="groupe" style="display: flex;">
-				<p class="phone-field" style=" margin-left: 0em; width: 70px;">
-					<label>Code</label>
-					<input type="text" name="phone" id="code" placeholder="+509" required >
-				</p>
 				<p class="phone-field" style=" margin-left: 0.2em; width: 100%;">
-					<label>Votre Numéro avec le code du pays</label>
-					<input type="text" name="phone" id="phone">
+					<label>Numéro whatsapplabel: <span style="color: red;">*</span></label>
+					<input type="number" name="entry.1359985371" id="phone" required>
 				</p>
 			</div>
-		<button type="button" onclick="insert()">Submit</button>
+		<button type="submit">Submit</button>
 		</form>
 		<div class="recu" id="recu">
-			<h1>Suivre nos cours dès maintenant</h1>
+			<h1>Suivre nos formations dès maintenant</h1>
 			<h2>Votre incription est un succès pour nous!</h2><hr />
 			<p>
 				Cours de programmation web sur android,100% gratuit<br>
 				al fin de la formation vous aurez un certificat et c'est toujour gratuit
 			</p>
 		   <center> 
-			   <a class="btn" href="https://chat.whatsapp.com/DoZF8oSOQLJGvNsBJuNQL1">
+			   <a class="btn" href="https://cb.run/jsNX">
 			   Commencer a Suivre le cours
 				</a>
 		   </center>
@@ -293,43 +302,6 @@
 		</div>
 		</div>
 		</div>
-		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
-		<script type="text/javascript">
-			// Initialize Firebase
-			var config = {
-				apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
-				authDomain: "maliste-d4c03.firebaseapp.com",
-				databaseURL: "https://maliste-d4c03.firebaseio.com",
-				projectId: "maliste-d4c03",
-				storageBucket: "maliste-d4c03.appspot.com",
-				messagingSenderId: "552655235785",
-				appId: "1:552655235785:web:a4b660caf5882e4be57b18",
-				measurementId: "G-V6R9FPCSG1"
-			};
-			firebase.initializeApp(config);
-			// Function to get form value
-			var codeV, nameV, emailV, phoneV;
-
-		function insert() {
-			nameV = document.getElementById('name').value;
-			emailV = document.getElementById('email').value;
-			phoneV = document.getElementById('phone').value;
-			codeV = document.getElementById('code').value;
-			var recu= document.getElementById('recu');
-			var form = document.getElementById('form');
-		firebase.database().ref('WHATSAPP/' +nameV).set({
-			NAME: nameV,
-			Mail: emailV,
-			CODE: codeV,
-			NUMBER: phoneV,
-		});
-		document.getElementById('recu').style.display ="block";
-        document.getElementById('form').style.display ="none";
-
-
-	}	
-		</script>
+	
 	</body>
 </html>
