@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>formatech</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="indexmobile.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css”>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="indexmobile.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div class="container">
     <div class="topnav" id="myTopnav">
       <a href="#home" class="active">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
+      <a href="#news" style="display: none;">News</a>
+      <a href="#contact" style="display: none;">Contact</a>
       <div class="dropdown">
-        <button class="dropbtn">Dropdown 
+        <button class="dropbtn" style="display: none;">Dropdown 
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
@@ -23,44 +27,123 @@
           <a href="#">Link 3</a>
         </div>
       </div> 
-      <a href="#about">About</a>
-      <div id="user_div">
-        <a id="user_para"></a>
-        <a onclick="logout()">Logout</a>
-      </div>
+      <a href="#about" style="display: none;">About</a>
       <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
-    <div class="header">
-      <div class="headerImg"></div>
-      <div class="headerTexte"></div>
-    </div>
-  
-    <div class="row">
-      <div class="column middle" style="background-color:white;">
-        <section id="home">
-          <h1>Formation (html ,css et bureautique)</h1><hr>
-                <p>
-                  On a des formations gratuite sur le langage html et css pour vous aider a coder bien rapide et sur votre 
-                android meme si vous n'avez pas d'un ordinateur.
-                  Si vous voulez vous lancer dans cette univers, vous aurez besoin conseils des autres, et nous sommes
-                justement la pour vous aider a tous comprendre.
-                </p>
-        </section>
-        <section class="deux-colonn">
-          <div style="background-image: url('assets/image/39.jpg'); background-repeat: no-repeat; background-size: cover;">
-          <div class="body" style="border: 0px;">
+    <header style="display: none;">
+      
+    </header>
+    <div class="content">
+      <main>
+        
+        <section class="home">
+          <h1><span><strong>Ftech Plus</strong>:</span> Plus de Formation sur la Technologie</h1>
+          <div id="home">
+            <div class="img">
+              <img src="images/phone.png" class="mySlides">
+              <img src="images/1.png" class="mySlides">
+              <img src="images/2.png" class="mySlides">
+            </div>
+            <div class="texte">
+              <h1>Formation (html ,css et bureautique)</h1><hr>
+                  <p>
+                    On a des formations gratuite sur le langage html et css pour vous aider a coder bien rapide et sur votre 
+                  android meme si vous n'avez pas d'un ordinateur.
+                    Si vous voulez vous lancer dans cette univers, vous aurez besoin conseils des autres, et nous sommes
+                  justement la pour vous aider a tous comprendre.
+                  </p>
+                  <p>Télécharger l'application Ftech Plus et profiter de nos ebooks gratuite</p>
+                  <center><a href="https://play.google.com/store/apps/details?id=com.mylifepro.com&hl=fr&gl=US"><button class="button"><span>Télécharger maintenant </span></button></a></center>
+                 
+            </div>
+          </div>
+          <div class="box">
+            <input type="checkbox"id="checkbox" />
+            <div class="menu">
+              <a class="button share_twitter" data-url="http://ftechplus.netlify.app">
+                <img class="button share_twitter" src="images/—Pngtree—twitter social media icon design_3654754.png" alt="">
+              </a>
+            <a class="button share_facebook" data-url="http://ftechplus.netlify.app">
+                <img class="button share_facebook" src="images/—Pngtree—facebook logo social media icon_3654753.png" alt="">
+            </a>
+            <a class="button share_gplus" data-url="http://ftechplus.netlify.app">
+                <img class="button share_gplus" src="images/—Pngtree—whatsapp social media icon design_3654805.png" alt="">
+            </a>
+            </div>
+          </div>
+          </section>
+          <section class="section-images">
+            
+          </section>
+
+
+          <section id="wrapper">
             <div class="wrapper">
-              <input type="checkbox" id="click">
-              <label class="btn-1" for="click">Subscribe</label>
-              <div class="field">
-                <input type="text" placeholder="Email Address">
-                <label for="click" class="btn-2">Subscribe</label>
+              <div class="form" id="form">
+                <div class="close"><i class="material-icons" onclick="closeForm()">close</i></div>
+                <div id="form">
+                  <div class="form-container">
+                    <h1 style="font-size: 20px;" id="message">ABONNEZ-VOUS</h1> <hr />               
+                   <div style="width: 99%;">
+                    <div class="name">
+                    <input type="text" style="margin-right: 5px ;" placeholder="Entrer votre nom complet" name="name" id="name" required>
+                    <input type="text" placeholder="Entrer votre Email" name="email" id="email" required>
+                    </div>
+                   </div>
+                    <div class="number">
+                      <select id="code" required placeholder="Code" value="Code">
+                        <option></option>
+                        <option value="+229">Benin (+229)</option>
+                        <option value="+257">Burundi (+257)</option>
+                        <option value="+226">Burkina Faso (+226)</option>
+                        <option value="+237">Cameroon (+237)</option>
+                        <option value="+1">Canada (+1)</option>
+                        <option value="+238">Cape Verde (+238)</option>
+                        <option value="+236">Central African Republic (+236)</option>
+                        <option value="+242">Congo (+242)</option>
+                        <option value="+242">Congo, the Democratic Republic of the (+242)</option>
+                        <option value="+225">Cote D'Ivoire (+225)</option>
+                        <option value="+1809">Dominican Republic (+1809)</option>
+                        <option value="+298">Faroe Islands (+298)</option>
+                        <option value="+594">French Guiana (+594)</option>
+                        <option value="+509">Haiti (+509)</option>
+                        <option value="+352">Luxembourg (+352)</option>
+                        <option value="+853">Macao (+853)</option>
+                        <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
+                        <option value="+261">Madagascar (+261)</option>
+                        <option value="+223">Mali (+223)</option>
+                        <option value="+377">Monaco (+377)</option>
+                        <option value="+227">Niger (+227)</option>
+                        <option value="+234">Nigeria (+234)</option>
+                        <option value="+262">Reunion (+262)</option>
+                        <option value="+250">Rwanda (+250)</option>
+                        <option value="+268">Swaziland (+268)</option>
+                        <option value="+228">Togo (+228)</option>
+                        <option value="+690">Tokelau (+690)</option>
+                        <option value="+676">Tonga (+676)</option>
+                        <option value="+260">Zambia (+260)</option>
+                        <option value="+263">Zimbabwe (+263)</option>
+                      </select>
+                      <input type="text" placeholder="Entrer votre numéro" name="number" id="number" required>
+                    </div>
+                    <div style="width: 97%;">
+                      <textarea placeholder="votre adresse ici" name="adress" id="adress" height='50px' required rows="4" cols="50"></textarea>
+                      <label for="email"><b>J'étudie :</b></label>
+                     <select id="infos" required placeholder="Infos" value="Infos">
+                       <option></option>
+                      <option value="Informatique bureautique">Informatique bureautique</option>
+                      <option value="Dépannage informatique.">dépannage informatique.</option>
+                      <option value="Débutant en informatique">Débutant en informatique</option>
+                     </select>
+                     </div>
+                    <button type="submit" class="btn" onclick="enregistrer()">Login</button>
+                  
+                  </div>
+                </div>
               </div>
-          </div>
-          </div>
-          </div>
-          <div style="padding: 5px; box-shadow: 0px 0px 3px 0px black;">
-            <h1>Informatique pour les débutant</h1>
+              <div class="desc" id="infos">
+                <div class="close"><i class="material-icons" onclick="closeInfos()">close</i></div>
+                <h1>Informatique pour les débutant</h1>
             <ul>
               <li>
                 <h3>Apprendre le bureautique</h3>
@@ -73,98 +156,58 @@
                   l'application <a href="">ftech plus</a> sur votre android.</span>
               </li>
             </ul>
-          </div>
-
-        </section>
-        <section class="contact" id="contact">
-          <div class="contact-box">
-            <div class="left"></div>
-            <div class="right">
-              <h2>Envoyer-nous un message</h2>
-              <input type="text" class="field" placeholder="Your Name">
-              <input type="text" class="field" placeholder="Your Email">
-              <input type="text" class="field" placeholder="Phone">
-              <textarea placeholder="Message" class="field"></textarea>
-              <button class="btn">Send</button>
-            </div>
-          </div>
-        </section>
-      
-
-      </div>
-      
-      <!--sidebar de mon blog gratuit-->
-      <div class="column side" >
-        <div class="block"> <!--signip an login-->
-          <div class="block-header">
-            <h1 id="logout">Connectez-vous, maintenant</h1>
-          </div>
-          <div class="block-content">
-            <div id="login_div" class="main-div">
-              <input type="email" placeholder="Email..." id="email_field" />
-              <input type="password" placeholder="Password..." id="password_field" />
-          
-              <button onclick="login()">Login to Account</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="block"> <!--signip an login-->
-          <div class="block-header">
-            <h1>Articles le plus recents</h1>
-          </div>
-          <div class="block-content">
-            <div class="blog-card">
-              <div class="meta">
-                <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
               </div>
-              <div class="description">
-                <h1>Connaitre google drive</h1>
-                <h2>Apprendre drive sur votre android</h2>
-                <p> 
-                  Apprendre a utiliser l'application googgle drive sur votre android,
-                  il vous permetra de sauvegarder tous vos donnés en ligne et meme vous contacts
-                  gratuitement et a vie 
-                </p>
-                <p class="read-more">
-                  <a href="pages/formation_drive.html">Read More</a>
-                </p>
+              <div class="about" id="about">
+                <div class="close"><i class="material-icons" onclick="closeAbout()">close</i></div>
+                <div id="aboutText">
+                  <h1>Qui je suis</h1>
+                <h2>Developper web en html et css, js</h2>
+                Bonjour, Je m’appelle Ruban Joseph. Je suis un Devolper ,Blogger et 
+                aussi un Designer. Si vous avez un projet ou si vous voulez 
+                faire un site web ou un blog pour votre Bisnes vous pouvez me contacter.
+
+                <p>Je fais dès que possible pour que vous aimez vraiment mon travail, si vous n’avez 
+                  pas saitisfaire ,je change cela jusqu’à ce que vous aimez je vous donne seticfaction résultat</p>
+                </div>
+                  <div id="about">
+                  <a href="../live/public/index.html"><button>Mon parcours</button></a>
+                  <button>Me contacter</button></div>
               </div>
             </div>
-          </div>
-        </div>
-      </div> <!--sidebar de mon blog gratuit-->
+          </section>
+      </main>
+      
+      <aside>
+
+      </aside>
     </div>
-  
-  <div class="footer">
-    <p>Footer</p>
+    <footer>
+      <p>Blog ftech plus</p>
+      <div id="boutton">
+        <button class="open-button" onclick="openInfos()"><i class="material-icons" style="color: red;" onclick="closeAbout()">info</i>infos</button>
+        <button class="open-button" onclick="openAbonnez()"><i class="material-icons" style="color: blue;" onclick="closeAbout()">mail</i>Abonnez</button>
+        <button class="open-button" onclick="openAbout()"><i class="material-icons" style="color: orange;" onclick="closeAbout()">person</i>About</button>
+      </div>
+    </footer>
   </div>
-</div>
-<script>
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-  </script>
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
-    authDomain: "maliste-d4c03.firebaseapp.com",
-    databaseURL: "https://maliste-d4c03.firebaseio.com",
-    projectId: "maliste-d4c03",
-    storageBucket: "maliste-d4c03.appspot.com",
-    messagingSenderId: "552655235785",
-    appId: "1:552655235785:web:a4b660caf5882e4be57b18",
-    measurementId: "G-V6R9FPCSG1"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="js.js"></script>
+    <script src="index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+    <script>
+          var firebaseConfig = {
+            apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
+            authDomain: "maliste-d4c03.firebaseapp.com",
+            databaseURL: "https://maliste-d4c03.firebaseio.com",
+            projectId: "maliste-d4c03",
+            storageBucket: "maliste-d4c03.appspot.com",
+            messagingSenderId: "552655235785",
+            appId: "1:552655235785:web:a4b660caf5882e4be57b18",
+            measurementId: "G-V6R9FPCSG1"
+
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
 </body>
 </html>
