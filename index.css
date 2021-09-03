@@ -286,7 +286,7 @@ main{
   
 } 
 .wrapper{
-  width:80%;
+  width:98%;
   background:#ffffff;
   border-radius:20px;
   box-shadow:2px 2px 12px rgba(0,0,0,0.2);
@@ -311,9 +311,17 @@ main{
 }
  .wrapper .form{
    width: 100%;
+   padding: 20px;
  }
  .wrapper .form #form{
    margin: 20px;
+}
+.wrapper .form #form p{
+  width: 100%;
+  padding: 2px;
+  text-align: justify;
+  font-family:calibri;
+ font-size:18px;
 }
  .wrapper .form #form input[type=text], input[type=mail], input[type=number], select {
   width: 100%;
@@ -326,17 +334,31 @@ main{
 }
 .wrapper .desc{
   width: 100%;
+  padding: 20px;
+  text-align: justify;
+  font-family:calibri;
+  font-size: 18px;
 }
 .wrapper .about{
   width: 100%;
-  padding: 5px;
+  padding: 20px;
   text-align: justify;
   font-family:calibri;
- font-size:16px;
+ font-size:18px;
+}
+#aboutText h1{
+  text-align: left;
+  margin-bottom: 2px;
 }
 .desc h1{
   text-align: left;
+  margin-bottom: 2px;
 }
+.desc h3{
+  text-align: left;
+  margin-bottom: 2px;
+}
+
 .wrapper ul{
   margin: 3px;
   padding: 0px;
@@ -344,6 +366,16 @@ main{
 .wrapper ul li{
   list-style: none;
   margin: 0px;
+}
+#aboutbtn{
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+}
+#aboutbtn button{
+  width: 100%;
+  margin-right: 10px;
 }
 
 /*---------------------------------*/

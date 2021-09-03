@@ -83,7 +83,11 @@
                 <div class="close"><i class="material-icons" onclick="closeForm()">close</i></div>
                 <div id="form">
                   <div class="form-container">
-                    <h1 style="font-size: 20px;" id="message">ABONNEZ-VOUS</h1> <hr />               
+                    <h1 style="font-size: 20px;" id="message">ABONNEZ-VOUS</h1> <hr /> 
+                    <div class="formheader">
+                      <p class="p">
+                        <span>Recevez votre ebook gratuit, pour commencer</span> </p> 
+                    </div>  <hr />          
                    <div style="width: 99%;">
                     <div class="name">
                     <input type="text" style="margin-right: 5px ;" placeholder="Entrer votre nom complet" name="name" id="name" required>
@@ -91,6 +95,12 @@
                     </div>
                    </div>
                     <div class="number">
+                      <select id="infos" required placeholder="Infos" value="Infos">
+                        <option></option>
+                       <option value="Informatique bureautique">Informatique bureautique</option>
+                       <option value="Dépannage informatique.">dépannage informatique.</option>
+                       <option value="Débutant en informatique">Débutant en informatique</option>
+                      </select>
                       <select id="code" required placeholder="Code" value="Code">
                         <option></option>
                         <option value="+229">Benin (+229)</option>
@@ -126,24 +136,14 @@
                       </select>
                       <input type="text" placeholder="Entrer votre numéro" name="number" id="number" required>
                     </div>
-                    <div style="width: 97%;">
-                      <textarea placeholder="votre adresse ici" name="adress" id="adress" height='50px' required rows="4" cols="50"></textarea>
-                      <label for="email"><b>J'étudie :</b></label>
-                     <select id="infos" required placeholder="Infos" value="Infos">
-                       <option></option>
-                      <option value="Informatique bureautique">Informatique bureautique</option>
-                      <option value="Dépannage informatique.">dépannage informatique.</option>
-                      <option value="Débutant en informatique">Débutant en informatique</option>
-                     </select>
-                     </div>
                     <button type="submit" class="btn" onclick="enregistrer()">Login</button>
                   
                   </div>
                 </div>
               </div>
-              <div class="desc" id="infos">
+              <div class="desc" id="info">
                 <div class="close"><i class="material-icons" onclick="closeInfos()">close</i></div>
-                <h1>Informatique pour les débutant</h1>
+                <h1>Informatique pour les débutant</h1> <hr />
             <ul>
               <li>
                 <h3>Apprendre le bureautique</h3>
@@ -155,23 +155,34 @@
                 <span>Devenir programmer web en html et css en apprenant les bases meme sur votre android gratuitement, juste Télécharger
                   l'application <a href="">ftech plus</a> sur votre android.</span>
               </li>
+
+              <li>
+                <span>
+                  
+                  <p>Si vous voulez apprendre avec nous ou vous avez besoind de vous orienter en informatique bureautique 
+                    ou programmation web en html et css en tant que débutant, n'hesitez pas a télécharger notre application.
+                  </p>
+                </span>
+              </li>
             </ul>
               </div>
               <div class="about" id="about">
                 <div class="close"><i class="material-icons" onclick="closeAbout()">close</i></div>
                 <div id="aboutText">
-                  <h1>Qui je suis</h1>
-                <h2>Developper web en html et css, js</h2>
+                  <h1>Qui je suis</h1><hr />
+                <h3>Developper web en html,css et js</h3>
                 Bonjour, Je m’appelle Ruban Joseph. Je suis un Devolper ,Blogger et 
                 aussi un Designer. Si vous avez un projet ou si vous voulez 
                 faire un site web ou un blog pour votre Bisnes vous pouvez me contacter.
 
                 <p>Je fais dès que possible pour que vous aimez vraiment mon travail, si vous n’avez 
                   pas saitisfaire ,je change cela jusqu’à ce que vous aimez je vous donne seticfaction résultat</p>
+
                 </div>
-                  <div id="about">
+                  <div id="aboutbtn">
                   <a href="../live/public/index.html"><button>Mon parcours</button></a>
-                  <a href="../live/public/viewer.html"><button>Me contacter</button></a></div>
+                  <a href="../live/public/viewer.html"><button>Me contacter</button></a>
+                </div>
               </div>
             </div>
           </section>

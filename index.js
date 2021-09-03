@@ -18,11 +18,11 @@ function closeForm() {
 
 
 function openInfos() {
-  document.getElementById("infos").style.display = "block";
+  document.getElementById("info").style.display = "block";
 }
 
 function closeInfos() {
-  document.getElementById("infos").style.display = "none";
+  document.getElementById("info").style.display = "none";
 }
 
 // slide image home de mon blog
