@@ -334,7 +334,7 @@ main{
 }
  .wrapper .form #form input[type=text], input[type=mail], input[type=number], select {
   width: 100%;
-  padding: 12px 20px;
+  padding: 8px 10px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -348,7 +348,7 @@ main{
 
   text-align: justify;
   font-family:calibri;
-  font-size: 14px;
+  font-size: 15px;
 }
 .wrapper .about{
   width: 100%;
@@ -356,7 +356,7 @@ main{
   padding-right: 10px;
   text-align: justify;
   font-family:calibri;
- font-size:14px;
+ font-size:15px;
 }
 #aboutText h1{
   text-align: left;
