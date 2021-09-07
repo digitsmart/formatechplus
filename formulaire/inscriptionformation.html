@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription formation drive</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: #fec107;
+  padding: 0 10px;
+}
+img{
+  width: 100%;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  background: #fff;
+  margin: 50px auto;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fec107;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 50%;
+  box-shadow: 0px 0px 4px 1px black;
+  margin: 10px;
+}
+.wrapper .desc{
+  width: 50%;
+  box-shadow: 0px 0px 4px 1px black;
+  padding: 10px;
+  margin: 10px;
+}
+.wrapper .desc .images{
+  display: flex;
+}
+
+.wrapper .desc img{
+
+  width: 50%;
+  margin-right: 7px;
+  margin-left: -2px;
+}
+.wrapper .desc h1{
+  font-size: 36px;
+  text-align: center;
+  color: blue;
+}
+.wrapper .desc h2{
+  font-size: 28px;
+  text-align: center;
+  color: orange;
+}
+.wrapper .desc p{
+  font-size: 18px;
+  text-align: center;
+  color: black;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.wrapper .form .inputfield div{
+  margin: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #fec107;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fec107;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #fec107;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #ffd658;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:800px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    margin-right: 10px;
+  }
+  .wrapper{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 2px;
+    padding: 1px;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+
+  .wrapper .form{
+  width: 100%;
+  box-shadow: 0px 0px 4px 1px black;
+  margin: 10px;
+}
+.wrapper .desc{
+  width: 100%;
+  box-shadow: 0px 0px 4px 1px black;
+  padding: 10px;
+  margin: 10px;
+}
+.wrapper .desc .images{
+  flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 2px;
+}
+
+.wrapper .desc img{
+
+  width: 100%;
+  margin-right: 7px;
+  margin-left: -2px;
+}
+.wrapper .desc h1{
+  font-size: 6vw;
+  text-align: center;
+  color: blue;
+}
+.wrapper .desc h2{
+  font-size: 3vw;
+  text-align: center;
+  color: orange;
+}
+.wrapper .desc p{
+  font-size: 4vw;
+  text-align: center;
+  color: black;
+}
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper" style="align-items: center;">
+    <div class="desc">
+      <h1>Deux formation sont disponible</h1>
+      <h2>Inscrivez-vous pour reserver votre place dans la salle de conference</h2>
+      <div class="images">
+        <img src="../images/3.png">
+      <img src="../images/5.png">
+      </div>
+      <p>Pour participer tous les jours, télécharger l'application ftech plus apprès votre inscription, vous recevez un ebook et un video bien detaille sur votre Nuemro ou email</p>
+    </div>
+
+    <div class="form">
+      <div class="title">
+        Formulaire d'inscription
+      </div>
+       <div class="inputfield">
+          <div>
+            <label>First Name</label>
+            <input type="text" class="input" id="fname">
+          </div>
+          <div>
+            <label>Last Name</label>
+            <input type="text" class="input" id="name">
+          </div>
+       </div>  
+
+       
+        <div class="inputfield">
+          <div class="custom_select">
+            <label>Gender</label>
+            <select id="gender">
+              <option value=""></option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="custom_select">
+            <label>Que voulez vous apprendre</label>
+            <select id="option">
+              <option value=""></option>
+              <option value="male">Formation Drive</option>
+              <option value="female">Formation html et css</option>
+              <option value="female">Les deux</option>
+            </select>
+          </div>
+       </div> 
+      
+
+        <div class="inputfield" style="margin-top: 10px;">
+         <div>
+          <label>Email Address</label>
+          <p id="message"></p>
+          <input type="text" class="input" id="email">
+         </div>
+       </div> 
+      <div class="inputfield">
+          <div class="custom_select">
+            <label>Code de votre pays</label>
+            <select id="code" required placeholder="Code" value="Code">
+              <option></option>
+              <option value="+229">Benin (+229)</option>
+              <option value="+257">Burundi (+257)</option>
+              <option value="+226">Burkina Faso (+226)</option>
+              <option value="+237">Cameroon (+237)</option>
+              <option value="+1">Canada (+1)</option>
+              <option value="+238">Cape Verde (+238)</option>
+              <option value="+236">Central African Republic (+236)</option>
+              <option value="+242">Congo (+242)</option>
+              <option value="+242">Congo, the Democratic Republic of the (+242)</option>
+              <option value="+225">Cote D'Ivoire (+225)</option>
+              <option value="+1809">Dominican Republic (+1809)</option>
+              <option value="+298">Faroe Islands (+298)</option>
+              <option value="+594">French Guiana (+594)</option>
+              <option value="+509">Haiti (+509)</option>
+              <option value="+352">Luxembourg (+352)</option>
+              <option value="+853">Macao (+853)</option>
+              <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
+              <option value="+261">Madagascar (+261)</option>
+              <option value="+223">Mali (+223)</option>
+              <option value="+377">Monaco (+377)</option>
+              <option value="+227">Niger (+227)</option>
+              <option value="+234">Nigeria (+234)</option>
+              <option value="+262">Reunion (+262)</option>
+              <option value="+250">Rwanda (+250)</option>
+              <option value="+268">Swaziland (+268)</option>
+              <option value="+228">Togo (+228)</option>
+              <option value="+690">Tokelau (+690)</option>
+              <option value="+676">Tonga (+676)</option>
+              <option value="+260">Zambia (+260)</option>
+              <option value="+263">Zimbabwe (+263)</option>
+            </select>
+          </div>
+
+          <div class="custom_select">
+            <label>Phone Number</label>
+            <input type="text" class="input" id="number">
+          </div> 
+       </div> 
+      <div class="inputfield" style="margin-top: 10px;">
+          <div>
+            <label>Address</label>
+          <textarea class="textarea" id="adress"></textarea>
+          </div>
+       </div> 
+      <div class="inputfield">
+          <div>
+            <label>Postal Code</label>
+          <input type="text" class="input" id="postal">
+          </div>
+       </div> 
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" id="therme">
+            <span class="checkmark"></span>
+          </label>
+          <p>Agreed to terms and conditions</p>
+       </div> 
+      <div class="inputfield">
+        <input type="submit" onclick="enregistrer()" value="Register" class="btn">
+      </div>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+<script>
+   var firebaseConfig = {
+            apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
+            authDomain: "maliste-d4c03.firebaseapp.com",
+            databaseURL: "https://maliste-d4c03.firebaseio.com",
+            projectId: "maliste-d4c03",
+            storageBucket: "maliste-d4c03.appspot.com",
+            messagingSenderId: "552655235785",
+            appId: "1:552655235785:web:a4b660caf5882e4be57b18",
+            measurementId: "G-V6R9FPCSG1"
+
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+   var codeV, nameV, fnameV, thermeV, emailV, numberV, optionV, genderV, adressV, optionV;
+
+function enregistrer() {
+     nameV = document.getElementById('name').value;
+     fnameV = document.getElementById('fname').value;
+     genderV = document.getElementById('gender')
+     codeV = document.getElementById('code').value;
+     emailV = document.getElementById('email').value;
+     numberV = document.getElementById('number').value;
+     adressV = document.getElementById('adress').value;
+     optionV = document.getElementById('option').value;
+     postalV = document.getElementById('postal').value;
+     thermeV = document.getElementById('therme').value;
+     var home = document.getElementById('home');
+     var signup = document.getElementById('signup');
+  if(nameV == ""){
+    document.getElementById('message').innerHTML ="Votre nom";
+    document.getElementById('message').style.color = '#fff';
+    document.getElementById('message').style.background ="red";
+  }else if (numberV == ""){
+    document.getElementById('message').innerHTML ="Votre numero";
+  }else if(codeV == ""){
+    document.getElementById('message').innerHTML ="Votre code pays";
+  }else if(adressV == ""){
+   document.getElementById('message').innerHTML ="Votre adresse";
+ }else{
+    firebase.database().ref('formation/' + nameV).set({
+        ANAME: (fnameV) + nameV,
+        Email: emailV,
+        NUMBER: (codeV) + numberV,
+        ADRESSE: adressV,
+        OPTION: optionV,
+        GENDER: genderV,
+        POSTAL: postalV,
+        THERME: thermeV,
+    });
+    document.getElementById('message').innerHTML ="Vous etes maimtenant abonnée";
+    document.getElementById('message').style.color = '#fff';
+    document.getElementById('message').style.background ="blue";
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('number').value = '';
+    document.getElementById('adress').value = '';
+    document.getElementById('home').style.display ='block';
+    document.getElementById('signup').style.display ='none';
+  }
+ }
+</script>
+</body>
+</html>
