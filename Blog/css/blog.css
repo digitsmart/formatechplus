@@ -47,7 +47,6 @@ body {
 .rightcolumn {
   width: 25%;
   padding-left: 2px;
-  background-color: blue;
 }
 
 /* Fake image */
@@ -63,7 +62,43 @@ body {
    padding: 20px;
    margin-top: 2px;
 }
-
+.rightcolumn .card .visiteur{
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  border: red 1px solid;
+  width: 100%;
+}
+.rightcolumn .card .visiteur a{
+  height: 50px;
+  background-color: gray;
+  font-size: 18px;
+  width: 400px;
+}
+#counter {
+  display: flex;
+  width: 100%;
+  font-family: serif;
+  font-size: 15px;
+  background-color: #000;
+  color: greenyellow;  
+  padding: 3px 6px;     
+}
+#counter i{
+  border: 1px solid red;
+  height: 30px;
+  width: 30px;
+  margin: auto;
+  margin-right: 2px;
+}
+#counter #root{
+  border: 1px solid red;
+  padding: 5px;
+  height: 30px;
+  width: auto;
+  margin: auto;
+  margin-left: 2px;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";

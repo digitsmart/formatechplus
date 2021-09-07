@@ -23,8 +23,9 @@
           <video
             src="https://res.cloudinary.com/ftechplus/video/upload/v1623173495/formation%20drive/Formation_Drive_Complet-1_aads3c.mp4" type="video/mp4"
             poster="https://res.cloudinary.com/ftechplus/image/upload/v1621870768/formation%20drive/images/Slide4_tazly6.jpg"
-            class="video">
-          </video>
+            class="video"
+          ></video>
+    
           <div class="player-controls">
             <div class="video-progress">
               <div class="video-progress-filled"></div>
@@ -45,8 +46,6 @@
               <span class="current">0:00</span> / <span class="duration">0:00</span>
             </div>
           </div>
-
-          <!--formulaire poppup de mon blog-->
           <div class="form-popup" id="myForm">
             <div class="form-container">
               <div style="background-color: white;">
@@ -76,10 +75,8 @@
               <button type="submit" id="payer" class="btn">Continuer votre paiement</button>
               </div>
             </div>
-          </div> <!--formulaire poppup de mon blog-->
-        </div><!--video de l'entete de mon blog-->
-
-        <!-- ma page d'infos sur mon blog-->
+          </div>
+        </div>
         <div class="plusinfos" id="plusinfos">
           <button type="button" class="btn cancel" onclick="closeplusinfos()">Close</button>
           <h1>Le Rm c'est quoi au juste</h1><hr />
@@ -93,8 +90,7 @@
             vous pouvez gagner au tant de Rm que vous voulez gratuitement</li>
             <li>contacter l'administrateur pour acheter de Rm</li>
           </ol>
-        </div> <!-- ma page d'infos sur mon blog-->
-        
+      </div>
         <h1>Formation Google drive</h1>
         <h2>Découvrir quelques fonctionnalité 
           de Google drive sur Android
@@ -115,13 +111,12 @@
             <li>Google Sheets : Exel</li>
             <li>Google Slide : Powerpoint</li>
           </ul>
-          <center><a href="/formulaire/inscriptionformation.html"><button>Reserver votre ici</button></a></center>
           </div>
       </div>
     
 
     <div class="rightcolumn">
-      <div class="card"  style="display: none;">
+      <div class="card" >
         <h2>About Me</h2>
         <div class="fakeimg" style="height:100px;">Image</div>  
           <center>
@@ -140,11 +135,16 @@
             </div>
           </center>
       </div>
-      <div class="card" style="display: none;">
+      <div class="card">
         <h3>Mes Visiteurs</h3>
-        <div id="counter"><i class="material-icons nav__icon">visibility</i><p  id="root"></p></div>
-        <script type="text/javascript" src="https://freehitcounters.org/count/9bgj"></script><br>
-        <a href='https://www.versicherungen.at/risikolebensversicherung/'>Risikoversicherung</a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=daa1e1d790ce191213a6860b4802b804636c63ba'></script>
+     <!--************CODE GEOCOUNTER************-->
+<a href="http://www.geovisites.com/fr/directory/informatique_actualite-et-medias.php?compte=2f5qenxcxrs6"  target="_blank"><img src="https://geoloc2.geovisite.ovh/private/geocounter.php?compte=2f5qenxcxrs6&base=geoloc2" border="1" alt="actualite et medias"></a>
+<!--************END CODE GEOCOUNTER************-->
+      </div>
+      <div class="card">
+        <h1 id="Counter">0</h1>
+<i class="material-icons nav__icon">visibility</i><p id="root"></p>
+<p id="p"></p>
       </div>
     </div>
   </div><!--content avec display flex-->
@@ -157,9 +157,9 @@
 <script src="../js/video.js"></script>
 <script src="../js/social.js"></script>
 <script src="../js/payer.js"></script>
+<script src="../js/chat.js"></script>
 <script src="../js/views.js"></script>
 <!--Firebase Libraries-->
-
 <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
