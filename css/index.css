@@ -389,7 +389,7 @@ main{
   width: 100%;
   margin-right: 10px;
 }
---------------------------------*/
+/*--------------------------------*/
 
 aside{
   display: none;
@@ -398,6 +398,7 @@ aside{
   margin: 5px;
   background: red;
 }
+
 footer{
   width: 100%;
   height: 100px;
