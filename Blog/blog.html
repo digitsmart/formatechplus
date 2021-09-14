@@ -1,47 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll CSS Slider</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/blogstyle.css">
+ 
 </head>
+
 <body>
-
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
-
-<div class="container">
-  <div class="leftcolumn">
-    <div class="card">
-      <a href="pages/formation_drive.html"><h2>Hacker et Cracker</h2></a>
-      <h5>Base du cracking et Hacking, Sep 3, 2021</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div class="container">
+      <section class="bar">
+        <h1>Livre Ftech Plus</h1>
+        <div class="search-bar">
+          <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="Search (utiliser les accents si c'est nésseacaire)">
+        </div>
+      </section>
+      <div class="content">
+        <main>
+         
+         <ul id="wrapper">
+          <h1>Web et Blog en html et cms</h1>
+          <div class="horizontal_slider">
+              <div class="slider_container">
+                 <center>
+                  <li class="item">
+                      <div  id="a">
+                          <img src="images/programmation.png"><br>
+                          <a href="#" class="h1">HTML & CSS</a>
+                          <p class="price"><em style="color: orangered;">Rm</em> 260</p>
+                          <div class="button"><a class="btn" onclick="window.location.href='details/programmation1.html';">Télécharger </a></div>
+                      </div>
+                  </li> <!--html et css-->
+      
+                  <li class="item">
+                      <div>
+                          <img src="images/commen_creer _blog.png"><br>
+                          <a href="#" class="h1">Créer un blog</a>
+                          <p class="price"><em style="color: orangered;">Rm</em> 200</p>
+                          <div class="button"><a class="btn" onclick="window.location.href='details/creerBlog.html';">Télécharger </a></div>
+                      </div>
+                  </li><!--creation blog avec blogger-->
+      
+                  <li class="item">
+                      <div>
+                          <img src="images/ibi.png"><br>
+                          <a href="#" class="h1">SQL Server 2008</a>
+                          <p class="price"><span></span><em style="color: orangered;">Rm</em> 450</p>
+                          <div class="button"><a class="btn" onclick="window.location.href='details/bia.html';">Télécharger </a></div>
+                      </div>
+                  </li><!--sql server 2008-->
+                 </center>
+              </div>
+          </div>
+          <h1>Astuces sur windows</h1>
+              <div class="horizontal_slider">
+                  <div class="slider_container">
+                      <center>
+                          <li class="item">
+                              <div  id="a">
+                                  <img src="images/crack mot de pass.png"><br>
+                                  <a href="#" class="h1">pass windows</a>
+                                  <p class="price"><em style="color: orangered;">Rm</em> 200</p>
+                                  <div class="button"><a class="btn" onclick="window.location.href='details/crackPass.html';">Télécharger </a></div>
+                              </div>
+                          </li> <!--html et css-->
+                          <li class="item">
+                              <div>
+                                  <img src="images/utilisateur.JPG"><br>
+                                  <a href="#" class="h1">Nom d'utilisateur</a>
+                                  <p class="price"><em style="color: orangered;">Rm</em> 50</p>
+                                  <div class="button"><a class="btn" onclick="window.location.href='details/utilisateur.html';">Télécharger </a></div>
+                              </div>
+                          </li><!--creation blog avec blogger-->
+                         </center>
+                  </div>
+              </div>
+         </ul>
+          </main>
+        <aside></aside>
+      </div>
     </div>
+
+   <div class="navbar" style="display: none;">
+    <a href="../home.html" class="active"><i class="material-icons">home</i></a>
+    <div class="espace" style="width: 100%;"></div>
+    <a href="#news"><i class="material-icons" style=" display:none; color: blue; font-weight: bold; padding: 2px; border: 1px solid;">navigate_before</i></a>
+    <a href="#contact"><i class="fas fa-home"></i></a>
   </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
+   <script>
+    function searchFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById('myinput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById('wrapper');
+        li = ul.getElementsByTagName('li');
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+        for(i=0 ; i< li.length; i++){
+            a = li[i].getElementsByTagName('a')[0];
+            if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+                li[i].style.display = "";
+            }
 
+            else{
+                li[i].style.display = 'none';
+                
+            }
+        }
+        }
+  </script>
 </body>
+
 </html>
