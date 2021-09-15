@@ -6,7 +6,7 @@ body{
   width: 100%;
 }
 .topnav {
-  width: 70%;
+  width: 80%;
   margin: auto;
   overflow: hidden;
   background-color: #FFF;
@@ -117,7 +117,7 @@ header{
   background-image: url('https://th.bing.com/th/id/R.2eb40ec93502f99e836dc7163eb42fbb?rik=FUE4IcbJS1j34w&riu=http%3a%2f%2fwww.entrepreneurshiplife.com%2fwp-content%2fuploads%2f2016%2f07%2fdigital-marketing.jpg&ehk=HDbQcsOMEIaUfGsZ5FBxVkO%2f0C1wGPbsUdypmLvXSSI%3d&risl=&pid=ImgRaw&r=0g');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 70%;
+  width: 80%;
   height: 300px;
   display: flex;
   justify-content: space-between;
@@ -126,7 +126,7 @@ header{
 .content{
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 main{
