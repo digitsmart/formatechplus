@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+  <script src='https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js'></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://apis.google.com/js/platform.js"></script>
+         <!-- Global site tag (gtag.js) - Google Analytics -->
+         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179488738-1"></script>
+         <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+    
+         gtag('config', 'UA-179488738-1');
+         </script>
+<link rel="stylesheet" href="../css/blog.css">
+<link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<div class="header">
+  <h2>Ftech Plus</h2>
+  <h3>Plus de Formation sur la Technologie</h3>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="leftcolumn">
+      <div class="card">
+        <div class="video-player">
+          <video
+            src="https://res.cloudinary.com/ftechplus/video/upload/v1623173495/formation%20drive/Formation_Drive_Complet-1_aads3c.mp4" type="video/mp4"
+            poster="https://res.cloudinary.com/ftechplus/image/upload/v1621870768/formation%20drive/images/Slide4_tazly6.jpg"
+            class="video">
+          </video>
+          <div class="player-controls">
+            <div class="video-progress">
+              <div class="video-progress-filled"></div>
+            </div>
+    
+            <button class="play-button" title="Play">►</button>
+    
+            <input
+              type="range"
+              class="volume"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+            />
+    
+            <div class="time">
+              <span class="current">0:00</span> / <span class="duration">0:00</span>
+            </div>
+          </div>
+
+          <!--formulaire poppup de mon blog-->
+          <div class="form-popup" id="myForm">
+            <div class="form-container">
+              <div style="background-color: white;">
+                <p onclick="closeForm()"><i class="material-icons" style="cursor: pointer; margin-right: 5px;border: 1px solid blue;">close</i>Payer pour lire la video</p>
+              <hr />
+              </div>
+              <button onclick="plusinfos()" class="allbtn">Plus infos sur Rm</button>
+              <div>
+                <center><span id="prix" style="color: orange;">250</span><span>Rm</span> </center>
+              </div>
+              <div id="formInput" style="background-color: white;">
+                <label for="email" id="msg">Email</label>
+              <input type="text" placeholder="Entrer votre pin" id="number" name="number" required>
+              <button id="select" class="allbtn">balance</button>
+            </div>
+            
+              <div id="nextForm" style="background-color: white;">
+                <p class="close" onclick="closeForm()"><i class="material-icons">close</i><label for="psw"><b>Votre RM</b></label></p><hr />
+                
+                <div id="myProgress">
+                  <div id="myBar"></div>
+                </div>
+              <div class="showinput">
+                <input type="text" id="montant" value="500" name="psw" disabled>
+                <input type="text" id="montant" value="Rm" name="psw" disabled>
+              </div>
+              <button type="submit" id="payer" class="btn">Continuer votre paiement</button>
+              </div>
+            </div>
+          </div> <!--formulaire poppup de mon blog-->
+        </div><!--video de l'entete de mon blog-->
+
+        <!-- ma page d'infos sur mon blog-->
+        <div class="plusinfos" id="plusinfos">
+          <button type="button" class="btn cancel" onclick="closeplusinfos()">Close</button>
+          <h1>Le Rm c'est quoi au juste</h1><hr />
+          <p>Rm ou RMOV qui veu dire Ruban vitual monaie, il vous permet de payer les achat sur le blog.
+          </p>
+
+          <h1>Comment gagner de Rm ?</h1>
+          <p>Deux possibilité de gagner de Rm pour votre achat</p>
+          <ol>
+            <li>Télécharger l'application FTECH PLUS ,<a href="">ici...</a>,en utilisant l'application 
+            vous pouvez gagner au tant de Rm que vous voulez gratuitement</li>
+            <li>contacter l'administrateur pour acheter de Rm</li>
+          </ol>
+        </div> <!-- ma page d'infos sur mon blog-->
+        
+        <h1>Formation Google drive</h1>
+        <h2>Découvrir quelques fonctionnalité 
+          de Google drive sur Android
+        </h2>
+        <ul id="formation-details">
+          <div>  
+            <h2>Premier partie de la formation</h2>
+            <li>Présentation Drive Android</li>
+            <li>Configuration Drive sur Android</li>
+            <li>Créer un dossier sur Drive Android</li>
+            <li>Stocker vos contact sur drive Android</li>
+            <li>Importer et exporter sur Drive Android</li>
+          </div>
+          <div>
+            <h2> Deuxièmes partie de la formation</h2>
+            <li>Présentation suite bureautique sur Drive</li>
+            <li>Google Docs : Word</li>
+            <li>Google Sheets : Exel</li>
+            <li>Google Slide : Powerpoint</li>
+          </ul>
+          <center><a href="/formulaire/inscriptionformation.html"><button>Reserver votre ici</button></a></center>
+          </div>
+      </div>
+    
+
+    <div class="rightcolumn">
+      <div class="card"  style="display: none;">
+        <h2>About Me</h2>
+        <div class="fakeimg" style="height:100px;">Image</div>  
+          <center>
+            <div id="panel">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+              </svg>
+              <h2>Login</h2>
+              <label for="usename">Username</label>
+              <input type="text" id="username">
+              <label for="password">Password</label>
+              <input type="password" id="pass">
+              <button id="login" class="btn btn-secondary btn-lg btn-block">Login</button>
+            </div>
+          </center>
+      </div>
+      <div class="card" style="display: none;">
+        <h3>Mes Visiteurs</h3>
+        <div id="counter"><i class="material-icons nav__icon">visibility</i><p  id="root"></p></div>
+        <script type="text/javascript" src="https://freehitcounters.org/count/9bgj"></script><br>
+        <a href='https://www.versicherungen.at/risikolebensversicherung/'>Risikoversicherung</a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=daa1e1d790ce191213a6860b4802b804636c63ba'></script>
+      </div>
+    </div>
+  </div><!--content avec display flex-->
+  </div> 
+
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
+
+<script src="../js/video.js"></script>
+<script src="../js/social.js"></script>
+<script src="../js/payer.js"></script>
+<script src="../js/views.js"></script>
+<!--Firebase Libraries-->
+
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+<script>
+  
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDVjzbTqXNzNsteN9FtUnLzG7J9G1h-Pkg",
+  authDomain: "signup-de54d.firebaseapp.com",
+  databaseURL: "https://signup-de54d.firebaseio.com",
+  projectId: "signup-de54d",
+  storageBucket: "signup-de54d.appspot.com",
+  messagingSenderId: "313335894880",
+  appId: "1:313335894880:web:367bf0a26531cbd0f1c405",
+  measurementId: "G-TX374HDPKS"
+
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+</body>
+</html>
