@@ -1,116 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizontal Scroll CSS Slider</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/blogstyle.css">
- 
-</head>
-
-<body>
-    <div class="container">
-      <section class="bar">
-        <h1>Livre Ftech Plus</h1>
-        <div class="search-bar">
-          <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="Search (utiliser les accents si c'est nésseacaire)">
-        </div>
-      </section>
-      <div class="content">
-        <main>
-         
-         <ul id="wrapper">
-          <h1>Web et Blog en html et cms</h1>
-          <div class="horizontal_slider">
-              <div class="slider_container">
-                 <center>
-                  <li class="item">
-                      <div  id="a">
-                          <img src="images/programmation.png"><br>
-                          <a href="#" class="h1">HTML & CSS</a>
-                          <p class="price"><em style="color: orangered;">Rm</em> 260</p>
-                          <div class="button"><a class="btn" onclick="window.location.href='details/programmation1.html';">Télécharger </a></div>
-                      </div>
-                  </li> <!--html et css-->
-      
-                  <li class="item">
-                      <div>
-                          <img src="images/commen_creer _blog.png"><br>
-                          <a href="#" class="h1">Créer un blog</a>
-                          <p class="price"><em style="color: orangered;">Rm</em> 200</p>
-                          <div class="button"><a class="btn" onclick="window.location.href='details/creerBlog.html';">Télécharger </a></div>
-                      </div>
-                  </li><!--creation blog avec blogger-->
-      
-                  <li class="item">
-                      <div>
-                          <img src="images/ibi.png"><br>
-                          <a href="#" class="h1">SQL Server 2008</a>
-                          <p class="price"><span></span><em style="color: orangered;">Rm</em> 450</p>
-                          <div class="button"><a class="btn" onclick="window.location.href='details/bia.html';">Télécharger </a></div>
-                      </div>
-                  </li><!--sql server 2008-->
-                 </center>
-              </div>
-          </div>
-          <h1>Astuces sur windows</h1>
-              <div class="horizontal_slider">
-                  <div class="slider_container">
-                      <center>
-                          <li class="item">
-                              <div  id="a">
-                                  <img src="images/crack mot de pass.png"><br>
-                                  <a href="#" class="h1">pass windows</a>
-                                  <p class="price"><em style="color: orangered;">Rm</em> 200</p>
-                                  <div class="button"><a class="btn" onclick="window.location.href='details/crackPass.html';">Télécharger </a></div>
-                              </div>
-                          </li> <!--html et css-->
-                          <li class="item">
-                              <div>
-                                  <img src="images/utilisateur.JPG"><br>
-                                  <a href="#" class="h1">Nom d'utilisateur</a>
-                                  <p class="price"><em style="color: orangered;">Rm</em> 50</p>
-                                  <div class="button"><a class="btn" onclick="window.location.href='details/utilisateur.html';">Télécharger </a></div>
-                              </div>
-                          </li><!--creation blog avec blogger-->
-                         </center>
-                  </div>
-              </div>
-         </ul>
-          </main>
-        <aside></aside>
-      </div>
-    </div>
-
-   <div class="navbar" style="display: none;">
-    <a href="../home.html" class="active"><i class="material-icons">home</i></a>
-    <div class="espace" style="width: 100%;"></div>
-    <a href="#news"><i class="material-icons" style=" display:none; color: blue; font-weight: bold; padding: 2px; border: 1px solid;">navigate_before</i></a>
-    <a href="#contact"><i class="fas fa-home"></i></a>
-  </div>
-   <script>
-    function searchFunction() {
-        var input, filter, ul, li, a, i;
-        input = document.getElementById('myinput');
-        filter = input.value.toUpperCase();
-        ul = document.getElementById('wrapper');
-        li = ul.getElementsByTagName('li');
-
-        for(i=0 ; i< li.length; i++){
-            a = li[i].getElementsByTagName('a')[0];
-            if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
-                li[i].style.display = "";
-            }
-
-            else{
-                li[i].style.display = 'none';
-                
-            }
-        }
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="formation informatique pour tous,Comment gagner de l'argent, argent, informarique, formation, facebook, whatsapp" >
+  <link rel="icon" href="" type="image/x-icon">
+  <meta name="description" content=" On a des formations gratuite sur le langage html et css pour vous aider a coder bien rapide et sur votre android meme si vous n'avez pas d'un ordinateur. Si vous voulez vous lancer dans cette univers">
+  <meta name="og:title" property="og:title" content="Plus de formation sur la technologie">
+  <meta name="robots" content="Formation, Informatique, technique, astuces">
+  <title>Ftech Plus</title>
+  <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css”>
+  <script src="https://apis.google.com/js/platform.js"></script>
+         <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179488738-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-179488738-1');
   </script>
-</body>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/blogstyle.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <section class="bar">
+                <h1>Livre Ftech Plus</h1>
+                <div class="search-bar">
+                    <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="Search (utiliser les accents si c'est nésseacaire)">
+                </div>
+            </section>
+            <div class="content">
+                <main>
+                
+                <ul id="wrapper">
+                <h1>Web et Blog en html et cms</h1>
+                <div class="horizontal_slider">
+                    <div class="slider_container">
+                        <center>
+                        <li class="item">
+                            <div  id="a">
+                                <img src="images/programmation.png"><br>
+                                <a href="#" class="h1">HTML & CSS</a>
+                                <p class="price"><em style="color: orangered;">Rm</em> 260</p>
+                                <div class="button"><a class="btn" onclick="window.location.href='details/programmation1.html';">Télécharger </a></div>
+                            </div>
+                        </li> <!--html et css-->
+            
+                        <li class="item">
+                            <div>
+                                <img src="images/commen_creer _blog.png"><br>
+                                <a href="#" class="h1">Créer un blog</a>
+                                <p class="price"><em style="color: orangered;">Rm</em> 200</p>
+                                <div class="button"><a class="btn" onclick="window.location.href='details/creer_un_blog.html';">Télécharger </a></div>
+                            </div>
+                        </li><!--creation blog avec blogger-->
+            
+                        <li class="item">
+                            <div>
+                                <img src="images/ibi.png"><br>
+                                <a href="#" class="h1">SQL Server 2008</a>
+                                <p class="price"><span></span><em style="color: orangered;">Rm</em> 450</p>
+                                <div class="button"><a class="btn" onclick="window.location.href='details/sql.html';">Télécharger </a></div>
+                            </div>
+                        </li><!--sql server 2008-->
+                        </center>
+                    </div>
+                </div>
+                <h1>Astuces sur windows</h1>
+                    <div class="horizontal_slider">
+                        <div class="slider_container">
+                            <center>
+                                <li class="item">
+                                    <div  id="a">
+                                        <img src="images/crack mot de pass.png"><br>
+                                        <a href="#" class="h1">pass windows</a>
+                                        <p class="price"><em style="color: orangered;">Rm</em> 200</p>
+                                        <div class="button"><a class="btn" onclick="window.location.href='details/crack_password.html';">Télécharger </a></div>
+                                    </div>
+                                </li> <!--html et css-->
+                                <li class="item">
+                                    <div>
+                                        <img src="images/utilisateur.JPG"><br>
+                                        <a href="#" class="h1">Nom d'utilisateur</a>
+                                        <p class="price"><em style="color: orangered;">Rm</em> 50</p>
+                                        <div class="button"><a class="btn" onclick="window.location.href='details/utilisateur.html';">Télécharger </a></div>
+                                    </div>
+                                </li><!--creation blog avec blogger-->
+                                </center>
+                        </div>
+                    </div>
+                </ul>
+                </main>
+                <aside></aside>
+            </div>
+        </div>
+
+        <div class="navbar" style="display: none;">
+            <a href="../home.html" class="active"><i class="material-icons">home</i></a>
+            <div class="espace" style="width: 100%;"></div>
+            <a href="#news"><i class="material-icons" style=" display:none; color: blue; font-weight: bold; padding: 2px; border: 1px solid;">navigate_before</i></a>
+            <a href="#contact"><i class="fas fa-home"></i></a>
+        </div>
+        <script>
+            function searchFunction() {
+                var input, filter, ul, li, a, i;
+                input = document.getElementById('myinput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById('wrapper');
+                li = ul.getElementsByTagName('li');
+
+                for(i=0 ; i< li.length; i++){
+                    a = li[i].getElementsByTagName('a')[0];
+                    if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+                        li[i].style.display = "";
+                    }
+
+                    else{
+                        li[i].style.display = 'none';
+                        
+                    }
+                }
+                }
+        </script>
+    </body>
 
 </html>
