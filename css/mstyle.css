@@ -1,0 +1,186 @@
+/* partie header en mode mobile*/
+@media screen and (max-width: 800px) {
+  body{
+    margin: 0px;
+    padding: 0px;
+  }
+  *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  .container{
+    border: 1px solid gray;
+    width: 100%;
+    margin: auto;
+  }
+  .topnav {
+    width: 100%;
+    margin: 0px;
+   
+  }
+  header{
+    background-image: url('../images/header8.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+  }
+  
+  header .slide{
+    height: 150px;
+    width: 40%;
+    display: none;
+  }
+  header .texte {
+    height: 190px;
+    border: 0px;
+  }
+  header #form{
+    width: 100%;
+    margin: 0px;
+    height: 164px;
+  }
+  header #form h1{
+    font-size: 3.5vw;
+  }
+  header #form h2{
+    font-size: 3vw;
+  }
+  header #form p{
+    font-size: 3vw;
+  }
+  header #form div button{
+    font-size: 3.7vw;
+  }
+  header #form ul li{
+    font-size: 3.7vw;
+    margin-top: 0px;
+  }
+  header #form div input[type=mail]{
+    font-size: 3vw;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .infos{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .infos .item{
+    width: 100%;
+  }
+  .infos .item h1{
+    font-size: 5vw;
+    color: blue;
+  }
+  .infos .item i{
+    color: white;
+    background: black;
+    font-family: bolder;
+    cursor: pointer;
+    border: 1px solid orange;
+    border-top-right-radius: 12px;
+    padding: 0px 6px 0px 6px;
+    margin: 0px -6px 6px 20px;
+    text-align: right;
+    justify-content: right;
+    float: right;
+  }
+  .infos .item p, ul li{
+    font-size: 3.5vw;
+    color: black;
+  }
+  .infos #itemB, #itemC{
+    display: none;
+  }
+  .infos .btnslide{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 49%;
+    left: 60%;
+  }
+  .infos .btnslide .w3-button{
+    display: block;
+    margin: 0px 10px 0px 10px;
+    color: white;
+    background: orangered;
+    border: 0px;
+    padding: 5px 20px 5px 20px;
+  }
+  .infos .btnslide .w3-button:hover{
+    display: block;
+    font-size: 16px;
+    margin: 0px 10px 0px 10px;
+    background: orange;
+    border: 0px;
+    padding: 5px 20px 5px 20px;
+  }
+  main{
+    width: 100%;
+    padding: 3px;
+  } main .home{
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  main .home div{
+    width: 100%;
+  }
+  main .home div p{
+    font-size: 4vw;
+    text-align: justify;
+    margin: 2px 5px 10px 1px;
+  }
+  main .service{
+    width: 100%;
+    margin: 0px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  main #service h1{
+    font-size: 6vw;
+  }
+  main .service div{
+    width: 100%;
+    margin-top: 10px;
+  }
+  .content, footer{
+    width: 100%;
+  }
+  aside{
+    display: none;
+  }
+  footer{
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  footer div{
+    width: 100%;
+  }
+
+  /*boutton de partage*/
+  .content {
+    padding: 4px 12px;
+  }
+
+  .share-btn-container {
+    transform: unset;
+    top: unset;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    flex-direction: row;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+    padding: 6px 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-btn-container a {
+    margin: 0 32px;
+  }
+}

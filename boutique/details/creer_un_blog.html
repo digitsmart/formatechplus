@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+  <script src='https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js'></script>
+  <meta name="keywords" content="formation informatique pour tous,Comment gagner de l'argent, argent, informarique, formation, facebook, whatsapp" >
+  <link rel="icon" href="" type="image/x-icon">
+  <meta name="description" content=" On a des formations gratuite sur le langage html et css pour vous aider a coder bien rapide et sur votre android meme si vous n'avez pas d'un ordinateur. Si vous voulez vous lancer dans cette univers">
+  <meta name="og:title" property="og:title" content="Plus de formation sur la technologie">
+  <meta name="robots" content="Formation, Informatique, technique, astuces">
+  <title>Ftech Plus</title>
+  <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css”>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  <script src="https://apis.google.com/js/platform.js"></script>
+         <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179488738-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-179488738-1');
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/detail.css">
+ 
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="/index.html" class="active">Home</a>
+    <a href="/formulaire/inscriptionformation.html">Formation en cours</a>
+    <a href="#contact" style="display: none;">Contact</a>
+    <div class="dropdown" style="display: none;">
+      <button class="dropbtn">Télécharger
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../liste.html">Livre en pdf</a>
+      </div>
+    </div> 
+    <a href="#about" style="display: none;">About</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  <header>
+    
+  </header>
+  <div class="container">
+   
+    <div class="content">
+      <main>
+        <section id="img">
+          <img src="image/commen_creer _blog.png" alt="programmation web en html et css">
+        </section>
+        <section id="details">
+              <h1>créer votre blog sans de la pub gratuit</h1>
+              <p><span class="price">200</span><span>Rm</span></p><hr>
+              <ul>
+                    ✓ Comment créer le blog ?<br>
+                    ✓ Comment mettre en ligne<br>
+                    ✓ Comment modifier le template<br>
+                      ➢ Ecrire votre premier article<br>
+                      ➢ Créer votre premier page<br>
+                      ➢ Publier sur votre blog<br>
+              </ul>
+                  <!--bouton de partage de mon site web-->
+                  <div class="share-btn-container">
+                    <a href="#" class="facebook-btn">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+    
+                    <a href="#" class="twitter-btn">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+    
+                    <a href="#" class="whatsapp-btn">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+    
+                    <img
+                    class="pinterest-img"
+                    src=""
+                    alt=""
+                  /> </div>
+            <center><button class="open-button" onclick="openForm()">Télécharger ce document</button></center>    
+        </section>
+        <div class="form-popup" id="myForm"> <!--FORMULAIRE DE MAIMENT-->
+           
+            <div class="form-container">
+              <center>
+                <h1>Payer avec votre compte Rm</h1>
+                <div class="prix">
+                  <input type="text" value="Payer" class="espace"><input type="text" id="prix" value="200" disabled><input class="espace" type="text" value="Rm">
+                </div>
+                <hr/>
+                <p id="msg">
+                </p>
+                <div class="g" id="balance">
+                  
+                    <div class="balance">
+                      <input type="password" class="input"  id="number" placeholder="Entrer votre pin ici">
+                      <button id="select" class="balancebtn">balance</button>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.mylifepro.com&hl=fr&gl=US"><p><em>Si vous n'avez pas de pin, clique ici...</em></p></a>
+                </div>
+                  
+                  
+                <div class="bar-btn" id="paie">
+                  <div id="myProgress">
+                    <div id="myBar"></div>
+                </div>
+                <p>Rmov disponible pour vos achat</p>
+                  <div class="groupe">
+                    <input type="text" value="Vous avez" disabled>
+                    <input type="text" id="montant" disabled>
+                    <input type="text"  value="Rmov" disabled>
+                  </div>
+                  <button class="btn" id="payer">Payer votre produit</button>
+                </div>
+              </center> <!--section de paiment-->
+              
+            </div>
+            <p class="fermer" onclick="fermer()">X</p>
+        </div>
+      </main>
+      <aside>
+        <div class="courses-container">
+          <div class="course">
+            <div class="course-preview">
+              <img src="image/img1.png" alt="">
+              
+            </div>
+            <div class="course-info">
+              <h2>Ftech Plus</h2>
+              <p>Créer votre pin et gagner de Rm gratuit en utilisant l'application chaque jour </p>
+              <a href="https://play.google.com/store/apps/details?id=com.mylifepro.com"><button class="btn">Continue</button></a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function fermer() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDVjzbTqXNzNsteN9FtUnLzG7J9G1h-Pkg",
+        authDomain: "signup-de54d.firebaseapp.com",
+        databaseURL: "https://signup-de54d.firebaseio.com",
+        projectId: "signup-de54d",
+        storageBucket: "signup-de54d.appspot.com",
+        messagingSenderId: "313335894880",
+        appId: "1:313335894880:web:367bf0a26531cbd0f1c405",
+        measurementId: "G-TX374HDPKS"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      
+      // Database reference 
+      var numberV, montantV, prix;
+      
+      function Ready(){
+      numberV = document.getElementById('number').value;
+      montantV = document.getElementById('montant').value;
+      }
+      //...........................select data.........................
+      document.getElementById('select').onclick = function(){
+      if(numberV ==""){
+      document.getElementById('msg').innerHTML="Veuillez entrer votre pin";
+      document.getElementById('msg').style.border="1px solid blue";
+      document.getElementById('msg').style.padding="10px";
+      }else{
+      
+      Ready();
+      firebase.database().ref(numberV).on('value',function(snapshot){;
+      document.getElementById('montant').value= snapshot.val().BALANCE;
+      document.getElementById("balance").style.display = 'none';
+      document.getElementById("paie").style.display = 'block';
+      });
+      }
+      }
+      
+      document.getElementById('payer').addEventListener('click', function(){
+      numberV = document.getElementById('number').value;
+      montantV = document.getElementById('montant').value;
+      var prix = document.getElementById('prix').value;
+      var price = 200;
+      var i = 0;
+      if(montantV > price){
+        firebase.database().ref(numberV).update({
+        NUMBER: numberV,
+        BALANCE: montantV - price,
+      })
+      if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("myBar");
+          var width = 1;
+          var id = setInterval(frame, 10);
+          function frame() {
+          if (width >= 100) {
+          clearInterval(id);
+          document.getElementById('montant').value = '';
+          document.getElementById('number').value = '';
+          window.location.assign("https://drive.google.com/uc?export=download&id=1CxITDRHlTGV2RXplz6gGHJo-fLN8nTZd");
+          i = 0;
+          } else {
+          width++;
+          elem.style.width = width + "%";
+          }
+          }
+          }
+      } else{
+        document.getElementById('msg').innerHTML = "Vous n'avez pas assez de Rm"; 
+      
+      }
+      
+      });
+      // The click Event
+    
+    </script>
+</body>
+</html>
