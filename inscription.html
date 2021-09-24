@@ -32,9 +32,9 @@ img{
   width: 100%;
 }
 .wrapper{
-  align-items: center;
-  display: block;
-  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
   background: #fff;
   margin: 50px auto;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
@@ -42,32 +42,16 @@ img{
 }
 
 .wrapper .title{
-  border: 1px solid blue;
-  padding: 5px;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 25px;
   color: #fec107;
-  box-shadow: 0px;
   text-transform: uppercase;
-  text-align: center;
-}
-.wrapper .title h1{
-  text-align: center;
-  color: blue;
-  font-size: 5.6vw;
-  font-weight: bolder;
-}
-.wrapper .title h3{
-  color: orangered;
-  font-size: 3.4vw;
-  font-weight: bolder;
   text-align: center;
 }
 
 .wrapper .form{
-  width: 70%;
-  margin: auto;
+  width: 50%;
   box-shadow: 0px 0px 4px 1px black;
   margin: 10px;
 }
@@ -79,7 +63,7 @@ img{
 }
 .wrapper #recu{
   display: none;
-  width: 100%;
+  width: 50%;
   box-shadow: 0px 0px 4px 1px black;
   padding: 10px;
   margin: 10px;
@@ -338,6 +322,11 @@ button:hover {
 </head>
 <body>
   <div class="wrapper" style="align-items: center;">
+    <div class="desc">
+      <h1>Deux formation sont disponible</h1>
+      <h2>Inscrivez-vous pour reserver votre place dans la salle de conference</h2>
+      <p>Pour participer tous les jours, télécharger l'application ftech plus apprès votre inscription, vous recevez un ebook et un video bien detaille sur votre Nuemro ou email</p>
+    </div>
     <div id="recu">
       <div class="banner"><img src="../images/formbanner.jpg" alt=""></div>
       <h1>Integer dans le groupe pour la formation</h1>
@@ -348,22 +337,21 @@ button:hover {
     <div class="form" id="form">
       <div >
         <div class="title">
-          <h1>Formulaire d'inscription</h1>
-          <h3>Resevez votre place pour la formation</h3>
+          Formulaire d'inscription
         </div>
          <div class="inputfield">
             <div>
-              <label>Enregistrer votre prénom</label>
+              <label>First Name</label>
               <input type="text" class="input" id="fname">
             </div>
             <div>
-              <label>Enregistrer votre nom</label>
+              <label>Last Name</label>
               <input type="text" class="input" id="name">
             </div>
          </div>  
           <div class="inputfield">
             <div class="custom_select">
-              <label>Votre Sexe</label>
+              <label>Gender</label>
               <select id="gender">
                 <option value=""></option>
                 <option value="male">Male</option>
@@ -375,16 +363,15 @@ button:hover {
               <label>Que voulez vous apprendre</label>
               <select id="option">
                 <option value=""></option>
-                <option value="Animation avec Powerpoint">Animation avec Powerpoint</option>
-                <option value="Graphisme avec Powerpoint">Graphisme avec Powerpoint</option>
-                <option value="Creation et Programmation web">Creation et Programmation web</option>
-                <option value="Toutes les Formations">Toutes les Formations</option>
+                <option value="male">Formation Drive</option>
+                <option value="female">Formation html et css</option>
+                <option value="female">Les deux</option>
               </select>
             </div>
          </div> 
           <div class="inputfield" style="margin-top: 10px;">
            <div>
-            <label>Entrer votre Adresse mail</label>
+            <label>Email Address</label>
             <p id="message"></p>
             <input type="text" class="input" id="email">
            </div>
@@ -434,7 +421,7 @@ button:hover {
          </div> 
         <div class="inputfield" style="margin-top: 10px;">
             <div>
-              <label>Votre Adresse</label>
+              <label>Address</label>
             <textarea class="textarea" id="adress"></textarea>
             </div>
          </div> 
@@ -481,7 +468,7 @@ button:hover {
 function enregistrer() {
      nameV = document.getElementById('name').value;
      fnameV = document.getElementById('fname').value;
-     genderV = document.getElementById('gender').value;
+     genderV = document.getElementById('gender')
      codeV = document.getElementById('code').value;
      emailV = document.getElementById('email').value;
      numberV = document.getElementById('number').value;
@@ -502,7 +489,7 @@ function enregistrer() {
   }else if(adressV == ""){
    document.getElementById('message').innerHTML ="Votre adresse";
  }else{
-    firebase.database().ref('Fiches d"inscription/' + nameV).set({
+    firebase.database().ref('formation/' + nameV).set({
         ANAME: (fnameV) + nameV,
         Email: emailV,
         NUMBER: (codeV) + numberV,
