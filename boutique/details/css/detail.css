@@ -143,15 +143,18 @@ header{
   justify-content: space-around;
   width: 100%;
   margin: auto;
+  margin-bottom: 60px;
 }
 main{
   display: flex;
   width: 100%;
   border: 1px solid red;
   box-shadow: 0px 0px 3px 0px;
+  margin-bottom: 20px;
 }
 section{
   margin: 10px;
+  margin-bottom: 60px;
 }
 details hr{
   margin: 1px;
@@ -347,6 +350,7 @@ color: #fff;
 font-size: 16px;
 padding: 5px;
 letter-spacing: 1px;
+
 }
 
 /* Button used to open the contact form - fixed at the bottom of the page */
@@ -358,6 +362,7 @@ border: none;
 cursor: pointer;
 opacity: 0.8;
 width: 280px;
+margin-bottom: 30px;
 }
 .open-button:hover{
   background: red;
@@ -617,6 +622,8 @@ opacity: 1;
   }
   main{
     flex-wrap: wrap;
+    height: 100%;
+    margin-bottom: 40px;
   }
   img{
     width: 100%;
@@ -625,8 +632,8 @@ opacity: 1;
   .form-popup {
     display: none;
     position: fixed;
-    bottom: 30%;
-    right: 5%;
+    bottom: 50%;
+    right: 50%;
     padding: 10px;
     background: blue;
     border: 1px solid blue;
