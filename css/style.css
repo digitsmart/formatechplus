@@ -380,16 +380,9 @@ footer div button{
   color: #1da1f2;
 }
 
-.share-btn-container .fa-linkedin {
-  color: #0077b5;
-}
 
-.share-btn-container .fa-pinterest {
-  color: #bd081c;
-}
-
-.share-btn-container .fa-whatsapp {
-  color: #25d366;
+.share-btn-container .fa-youtube {
+  color: red;
 }
 
 /* Media Queries */
