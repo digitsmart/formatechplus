@@ -51,19 +51,22 @@
       margin: auto;
     }
     .h{
-      background-color: gray;
+      background-color: rgba(0, 0, 0, 0.767);
       padding: 10px;
       align-items: center;
+      position: absolute;
+      top: 5%;
+      left: 27%;
     }
     .h h1{
       color: yellow;
-      font-size: 30px;
+      font-size: 36px;
       text-align: center;
       margin: 10px;
     }
     .h h2{
       color: yellowgreen;
-      font-size: 20px;
+      font-size: 28px;
       text-align: center;
       margin: 10px;
     }
@@ -77,7 +80,13 @@
       margin: 10px;
       align-items: center;
     }
+    .infos h2{
+      font-size: 35px;
+      color: orangered;
+      text-align: center;
+    }
     .infos h3{
+      font-size: 35px;
       color: rgb(0, 17, 255);
       text-align: center;
     }
@@ -86,9 +95,9 @@
       text-align: center;
     }
     p{
-      color: #FFF;
+      color: black;
       text-align: center;
-      font-size: 18px;
+      font-size: 20px;
     }
     /*formulaire d'inscription*/
    
@@ -170,14 +179,21 @@
       
         <section id="home">
           <div class="h">
-            <h1>Formation offerte en html et css sur android</h1>
-          <h2>De A à Z pour les débutants, créer votre page web sans problème</h2>
+            <h1>Programmation web en html et css</h1>
+            <h2>Formation pour debutant en programmation (html et css)</h2>
           </div>
-          <video src="" controls></video>
+          <video src="" controls style="display: none;"></video>
+          <img src="../images/back2.jpg" alt=" cours html et css" style="height: 200px;">
           <div class="infos" id="infos">
-            <h3>Recevoir le plan d’action immédiatement</h3>
-            <h4>Et etre accompagnéé Durant une semaine</h4>
-            <center><button onclick="receive()">Recevoir le plan ici</button></center>
+            <h3>Formation html et css</h3>
+            <p>
+              Voulez-vous créer votre propre site web en html et css, pour faire de la promotion ou vendre vos produits en 
+            ligne, ne tarder plus,Comment creer un site web en html et css, partie <strong>front-end</strong> 
+            et heberger gratuitement
+           </p>
+            <h2>formation : 7 octobre 2021</h2>
+            <h4>Pour vous inscrir cliquer sur boutton et remplir le formulaire</h4>
+            <center><button onclick="receive()">Reserver votre place</button></center>
           </div>
           <p class="para">
             Nous ne croyons pas aux programmes "devenir programmeur web dans quelque jours".
@@ -205,7 +221,7 @@
             <div class="main">
               <div class="head">
                 <p>Reserver votre place</p>
-                <h4>Date de la formation 29 septembre</h4>
+                <h4>Date de la formation 7 octobre 2021</h4>
               </div>
               <div class="form fl">
                 <div class="form">
@@ -288,7 +304,7 @@
              data-full-width-responsive="true"></ins>
          <script>
              (adsbygoogle = window.adsbygoogle || []).push({});
-         </script>
+         </script>      
       </footer>
     </div>
   </div>
@@ -319,7 +335,6 @@
    var codeV, lnameV, pnameV, emailV, numberV, ageV, sexV;
 
 function submit() {
-  alert('hello wolrd');
      lnameV = document.getElementById('lname').value;
      pnameV = document.getElementById('pname').value;
      sexV = document.getElementById('sex').value;
@@ -358,7 +373,7 @@ function submit() {
    document.getElementById('message').style.color = '#fff';
    document.getElementById('message').style.background ="red";
  }else{
-    firebase.database().ref('formation 29 septembre/' + lnameV).set({
+    firebase.database().ref('formation 7 octobre 2021/' + lnameV).set({
         ANAME: lnameV + pnameV,
         Email: emailV,
         NUMBER: (codeV) + numberV,
