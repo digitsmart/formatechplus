@@ -62,6 +62,44 @@
     font-size: 3vw;
     margin: 0px;
   }
+
+  main .home .form {
+    width: 100%;
+    border-radius: 5px;
+    background-color: blue;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+  }
+  main .home #form{
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+    background: orange;
+    padding: 10px;
+  }
+  main .home .form h3{
+    font-size: 4vw;
+  }
+  main .home .form h4{
+    font-size: 3.5vw;
+  }
+  main .home input[type=submit] {
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+
 }
 
 @media screen and (max-width: 800px){
@@ -141,9 +179,12 @@
   .share-btn-container {
     transform: unset;
     top: unset;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 50px;
+    border: 1px solid red;
     flex-direction: row;
     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
     padding: 6px 0;
@@ -154,4 +195,5 @@
   .share-btn-container a {
     margin: 0 32px;
   }
+ 
 }

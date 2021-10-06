@@ -262,6 +262,97 @@ main .home .form .name, .number{
   width: 100%;
 }
 
+/* formulaire d'abonnement andan sidebare*/
+aside #form{
+  width: 90%;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  background: orange;
+  padding: 10px;
+}
+.form h3{
+  font-size: 26px;
+  margin: 0px;
+}
+.form h4{
+  font-size: 20px;
+  margin: 0px;
+}
+aside #form .code{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  border: 0px;
+  
+}
+aside .form .message{
+  width: 70%;
+  margin: auto;
+}
+aside #form .code #code{
+  width: 10px;
+  background: blue;
+  color: white;
+  margin-right: 3px;
+}
+aside #form .code #number{
+  
+  margin-right: 3px;
+}
+aside input[type=mail], input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+aside input[type=submit] {
+  width: 100%;
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+aside input[type=submit]:hover {
+  background-color: orange;
+}
+
+aside .form {
+  width: 98%;
+  border-radius: 5px;
+  background-color: blue;
+  padding: 2px;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+aside .form .p{
+  font-size: 12px;
+  color: black;
+  padding: 5px;
+  background: white;
+}
+aside .form p span{
+  font-size: 12px;
+  color: black;
+}
+aside .form h4{
+  font-size: 14px;
+}
+aside .form .name, .number{
+  display: flex;
+  width: 100%;
+}
+/*fin side bar formulaire*/
+
 main .service{
   background: rgba(4, 4, 230, 0.411);
   display: flex;
@@ -338,6 +429,83 @@ aside .block-content button:hover{
   background: orange;
 
 }
+/*rezpo sosyal sidebar*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.wrapper{
+  margin: auto;
+  width: max-content;
+}
+.wrapper .button{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin: 0 5px 0px 10px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 85px;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 2px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon{
+  background: #333;
+}
+.wrapper .button:nth-child(5):hover .icon{
+  background: #ff0000;
+}
+.wrapper .button .icon i{
+  font-size: 15px;
+  line-height: 40px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+}
+.wrapper .button span{
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 40px;
+  margin-left: 5px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #4267B2;
+}
+.wrapper .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span{
+  color: #E1306C;
+}
+.wrapper .button:nth-child(4) span{
+  color: #333;
+}
+.wrapper .button:nth-child(5) span{
+  color: #ff0000;
+}
 footer{
   width: 100%;
   display: flex;
@@ -411,17 +579,21 @@ footer div button{
 }
 
 .share-btn-container .fa-facebook {
-  color: #3b5998;
+  color: #1043b1;
 }
 
 .share-btn-container .fa-twitter {
   color: #1da1f2;
 }
 
+.share-btn-container .fa-whatsapp {
+  color: #178801;
+}
 
 .share-btn-container .fa-youtube {
   color: red;
 }
+
 
 /* Media Queries */
 
