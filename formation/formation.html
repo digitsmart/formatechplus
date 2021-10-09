@@ -308,7 +308,7 @@
             ligne, ne tarder plus,Comment creer un site web en html et css, partie <strong>front-end</strong> 
             et heberger gratuitement
            </p>
-            <h2>formation : 7 octobre 2021</h2>
+            <h2>formation : 15 octobre 2021</h2>
             <p><strong>Pour vous inscrir cliquer sur boutton et remplir le formulaire</strong></p>
             <center><button onclick="receive()">Reserver votre place</button></center>
              <!--Mes reseau sociaux ici-->
@@ -360,7 +360,7 @@
             <div class="main">
               <div class="head">
                 <p>Reserver votre place</p>
-                <h4>Date de la formation 7 octobre 2021</h4>
+                <h4>Date de la formation 15 octobre 2021</h4>
               </div>
               <div class="form fl">
                 <div class="form">
@@ -422,7 +422,13 @@
                       <option value="fille">Fille</option>
                       <option value="Autres">Autres</option>
                     </select>
+                    <select name="date" id="heure">
+                      <option value="Jeudi (3heures - 6heures)">Jeudi (3heures - 6heures)</option>
+                      <option value="Vendredi ( 10 heures 12 heures )">Vendredi ( 10 heures 12 heures )</option>
+                    </select>
                   </p>
+                  <label for="">Qui vous a parle de cette formation</label>
+                  <p><input type="refer" value="" id="ref" placeholder="Antre nom mou ki palew de fomasyon an" required></p>
                   <p id="message"></p>
                   <p> <input type="submit" name="sb" value="SUBMIT" id="submit" onclick="submit()"></p>
                 </div>
@@ -430,10 +436,6 @@
             </div>
           </div>
         </section>
-        <ul id="ul">
-          <li>bonjour</li>
-          <li>bonsoir</li>
-        </ul>
       </main>
       <footer>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7979799450178267"
@@ -475,7 +477,7 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
 
-   var codeV, lnameV, pnameV, emailV, numberV, ageV, sexV;
+   var codeV, lnameV, pnameV, emailV, numberV, ageV, sexV, heureV, refV;
 
 function submit() {
      lnameV = document.getElementById('lname').value;
@@ -485,6 +487,8 @@ function submit() {
      emailV = document.getElementById('mail').value;
      numberV = document.getElementById('number').value;
      ageV = document.getElementById('age').value;
+     heureV = document.getElementById('heure').value;
+     refV = document.getElementById('ref').value;
      var home = document.getElementById('home');
      var form = document.getElementById('form');
   if(lnameV == ""){
@@ -515,13 +519,23 @@ function submit() {
    document.getElementById('message').innerHTML ="Selectionner votre sexe";
    document.getElementById('message').style.color = '#fff';
    document.getElementById('message').style.background ="red";
+ }else if(heureV == ""){
+   document.getElementById('message').innerHTML ="Selectionner L'heure qui vous convient";
+   document.getElementById('message').style.color = '#fff';
+   document.getElementById('message').style.background ="red";
+ }else if(refV == ""){
+   document.getElementById('message').innerHTML ="Mete nom moun ki palew de fomasyon sa";
+   document.getElementById('message').style.color = '#fff';
+   document.getElementById('message').style.background ="red";
  }else{
-    firebase.database().ref('formation 7 octobre 2021/' + lnameV).set({
+    firebase.database().ref('formation 15 octobre 2021/' + lnameV).set({
         ANAME: lnameV + pnameV,
         Email: emailV,
         NUMBER: (codeV) + numberV,
         AGE: ageV,
         SEXE: sexV,
+        HEURE: heureV,
+        REFERENCE: refV,
     });
     document.getElementById('home').style.display ='block';
     document.getElementById('form').style.display ='none';
@@ -531,6 +545,7 @@ function submit() {
     document.getElementById('mail').value = '';
     document.getElementById('number').value = '';
     document.getElementById('adress').value = '';
+    document.getElementById('ref').value = '';
     
   }
  }
@@ -565,7 +580,7 @@ var message = document.getElementById('ul');
 function init() {
 
 let postUrl = encodeURI(document.location.href);
-let postTitle = encodeURI("Programmation web en html et css\nFormation pour débutant en programmation web\n\nDans cette formation ,je t'apprends:\n\nLa base de la prommation web?\nComment créer votre premier page web?\nComment héberger gratuitement?");
+let postTitle = encodeURI("Programmation web en html et css\nFormation pour débutant en programmation web\n\nDans cette formation ,je t'apprends:\n\nLa base de la prommation web?\nComment créer votre premier page web?\nComment héberger gratuitement?\n\n");
 
 
 facebookBtn.setAttribute(
