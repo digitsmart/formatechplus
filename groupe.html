@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0px;
+      padding: 0px;
+      background: white;
+    }
+    img{
+      width: 100%;
+    }
+    .container{
+      width: 60%;
+      margin: auto;
+      box-shadow: 0px 0px 3px 1px black;
+    }
+    .content{
+      width: 100%;
+    }
+    main{
+      width: 100%;
+    }
+    header{
+      background-image: url('images/Informatique.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      width: 100%;
+      height: 250px;
+      margin: auto;
+      color: white;
+    }
+    center{
+      background: orange;
+    }
+   
+    .logo{
+        width: 230px;
+        background: white;
+        align-items: center;
+        justify-content: center;
+        height: 230px;
+        border: 1px solid red;
+        border-radius: 15px;
+        margin: auto;
+      }
+      .logo img{
+        width: 100%;
+        height: 100%;
+      }
+      .des{
+        
+        border: 1px solid red;
+        margin: 10px;
+        background: rgba(1, 1, 56, 0.493);
+      }
+    .btncenter{
+      background: blue;
+      border: 0px;
+      border-radius: 5px;
+      font-size: 22px;
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      padding: 10px;
+    }
+    .btncenter:hover{
+      background: red;
+      font-size: 24px;
+      padding: 15px;
+    }
+    .objectif{
+      display: flex;
+      margin: auto;
+      padding: 10px;
+      border: 1px solid blue;
+      box-shadow: 0px 0px 3px 1px black;
+      margin: 3px;
+    }
+    .objectif ul{
+      width: 100%;
+      padding: 0px;
+      margin: auto 10px;
+    }
+    .objectif ul li{
+      list-style: none;
+    }
+
+    .objectif .ul{
+      width: 100%;
+      padding: 0px;
+      margin: 2px 1px 5px 1px;
+      border: 1px solid blue;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .objectif .ul h1{
+      margin: 1px;
+      text-align: left;
+      color: blue;
+    }
+    /* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=number]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type=mail]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: blue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+button, #fermer{margin: 10px;
+  width: 96%;
+  background-color: orange;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+button{margin: 10px;
+  width: 96%;
+  background-color: orange;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+/* Style the container */
+#form {
+  border-radius: 5px;
+  background-color: #b1b1b1;
+  padding: 20px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+    @media only screen and (max-width: 800px){
+      .container{
+        width: 100%;
+        padding: 1px;
+      }
+      header{
+        width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .logo{
+        width: 100px;
+        background: white;
+        align-items: center;
+        justify-content: center;
+        height: 90px;
+        border-radius: 15px;
+        margin: auto;
+      }
+      .logo img{
+        width: 100%;
+        height: 100%;
+      }
+      
+      h1{
+        font-size: 6.5vw;
+        text-align: center;
+      }
+      h2{
+        font-size: 5.5vw;
+        text-align: center;
+      }
+      .objectif{
+        flex-wrap: wrap;
+      }
+      .btncenter{
+        font-size: 5vw;
+      }
+      .btncenter:hover{
+        font-size: 5.1vw;
+        padding: 7px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <header>
+        <div class="logo">
+          <img src="images/mon logo.png" alt="">
+        </div>
+       <div class="des">
+        <h1>Groupe whatsapp informatique</h1>
+        <h2>Apprendre les bases pour bien débuter dans votre apprentissage</h2>
+       </div>
+      </header>
+      <section>
+        <center><button class="btncenter" onclick="btnform()">Integrer dans le groupe, maitenant</button></center>
+      </section>
+      <main>
+        <section>
+          <img src="images/whatsa.png" alt="">
+        </section>
+       <section class="objectif">
+         <div class="ul">
+          <ul>
+            <h1>Objectif du groupe :</h1> <hr>
+            <li>Apprendre le html et css (Base)</li>
+            <li>Comment créer un blog gratuit a vis</li>
+            <li>Comment bien utiliser votre android.</li>
+            <li>Comment utiliser suites Google Drive.</li>
+          </ul>
+         </div>
+         <div class="ul">
+         
+           <ul>
+            <h1>Vous recevez chaque jours</h1> <hr>
+            <li>Un document en PDF</li>
+            <li>Un vidéo sur le document</li>
+            <li>Chaque samedi : conférence</li>
+            <li>Question dans le forum whatsapp</li>
+            
+           </ul>
+         </div>
+       </section>
+
+       <section>
+        <div id="form">
+          <div>
+            <div class="row">
+              <!--prenom-->
+              <div class="col-25">
+                <label for="fname" id="msgPrenom">Votre Prenom</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Votre Prenom">
+              </div>
+            </div>
+            <!--fin prenom-->
+
+            <!--nom-->
+            <div class="row">
+              <div class="col-25">
+                <label for="lname" id="msgName">Votre Nom</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="name" name="lastname" placeholder="Votre nom">
+              </div>
+            </div>
+            <!--fin nom-->
+
+            <div class="row">
+              <div class="col-25">
+                <label for="email" id="msgEmail">Votre Email</label>
+              </div>
+              <div class="col-75">
+                <input type="mail" id="email" name="lastname" placeholder="Votre Email">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="country" id="pays">Country</label>
+              </div>
+              <div class="col-75">
+                <select name="code" id="code">
+                  <option></option>
+                      <option value="+229">Benin (+229)</option>
+                      <option value="+257">Burundi (+257)</option>
+                      <option value="+226">Burkina Faso (+226)</option>
+                      <option value="+237">Cameroon (+237)</option>
+                      <option value="+1">Canada (+1)</option>
+                      <option value="+238">Cape Verde (+238)</option>
+                      <option value="+236">Central African Republic (+236)</option>
+                      <option value="+242">Congo (+242)</option>
+                      <option value="+242">Congo, the Democratic Republic of the (+242)</option>
+                      <option value="+225">Cote D'Ivoire (+225)</option>
+                      <option value="+1809">Dominican Republic (+1809)</option>
+                      <option value="+298">Faroe Islands (+298)</option>
+                      <option value="+594">French Guiana (+594)</option>
+                      <option value="+509" id="haiti">Haiti (+509)</option>
+                      <option value="+352">Luxembourg (+352)</option>
+                      <option value="+853">Macao (+853)</option>
+                      <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
+                      <option value="+261">Madagascar (+261)</option>
+                      <option value="+223">Mali (+223)</option>
+                      <option value="+377">Monaco (+377)</option>
+                      <option value="+227">Niger (+227)</option>
+                      <option value="+234">Nigeria (+234)</option>
+                      <option value="+262">Reunion (+262)</option>
+                      <option value="+250">Rwanda (+250)</option>
+                      <option value="+268">Swaziland (+268)</option>
+                      <option value="+228">Togo (+228)</option>
+                      <option value="+690">Tokelau (+690)</option>
+                      <option value="+676">Tonga (+676)</option>
+                      <option value="+260">Zambia (+260)</option>
+                      <option value="+263">Zimbabwe (+263)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="lname" id="msgNumber">Votre Numero Whatsapp</label>
+              </div>
+              <div class="col-75">
+                <input type="number" id="number" name="lastname" placeholder="Votre numero whatsapp">
+              </div>
+            </div>
+                <button  onclick="send()" >Envoyer votre demande</button>
+              <button  id="fermer" onclick="fermer()" >Fermer le formulaire</button>
+           
+          </div>
+        </div>
+       </section>
+      </main>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+
+  <script>
+     var firebaseConfig = {
+              apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
+              authDomain: "maliste-d4c03.firebaseapp.com",
+              databaseURL: "https://maliste-d4c03.firebaseio.com",
+              projectId: "maliste-d4c03",
+              storageBucket: "maliste-d4c03.appspot.com",
+              messagingSenderId: "552655235785",
+              appId: "1:552655235785:web:a4b660caf5882e4be57b18",
+              measurementId: "G-V6R9FPCSG1"
+  
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+
+          function send() {
+
+nameV = document.getElementById('name').value;
+fnameV = document.getElementById('fname').value;
+codeV = document.getElementById('code').value;
+emailV = document.getElementById('email').value;
+numberV = document.getElementById('number').value;
+haiti = document.getElementById('haiti');
+if(fnameV == ""){
+document.getElementById('msgPrenom').innerHTML ="Enregistrer votre prenom";
+document.getElementById('msgPrenom').style.color = '#fff';
+document.getElementById('msgPrenom').style.background ="red";
+}else if(nameV == ""){
+document.getElementById('msgName').innerHTML ="Entrer votre nom";
+document.getElementById('msgName').style.color = '#fff';
+document.getElementById('msgName').style.background ="red";
+}else if(emailV == ""){
+document.getElementById('msgEmail').innerHTML ="Entrer votre email";
+document.getElementById('msgEmail').style.color = '#fff';
+document.getElementById('msgEmail').style.background ="red";
+}else if(numberV == ""){
+document.getElementById('msgNumber').innerHTML ="Entrer votre numéro";
+document.getElementById('msgNumber').style.color = '#fff';
+document.getElementById('msgNumber').style.background ="red";
+}else if(codeV == ""){
+document.getElementById('pays').innerHTML ="Selectionner code pays";
+document.getElementById('pays').style.color = '#fff';
+document.getElementById('pays').style.background ="red";
+}else{
+  firebase.database().ref('Cours whatsapp 25 octobre/' + nameV).set({
+   ANAME: (fnameV) + nameV,
+   Email: emailV,
+   NUMBER: (codeV) + numberV,
+  });
+if(document.getElementById('code').value == "+509"){
+  window.location.href="https://chat.whatsapp.com/BX3oRsQEc311T4b3b1sPUy";
+  }else{
+    window.location.href="https://chat.whatsapp.com/HcaM6HKH7PIBb30J1IEKKj";
+  }
+document.getElementById('fname').value = '';
+document.getElementById('lname').value = '';
+document.getElementById('email').value = '';
+document.getElementById('number').value = '';
+
+}
+}
+</script> 
+  <script>
+    function btnform(){
+      document.getElementById('form').style.display ='block';
+    }
+    function fermer(){
+      document.getElementById('form').style.display ='none';
+    }
+  </script>
+</body>
+</html>
