@@ -4,7 +4,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="keywords" content="formation informatique pour tous,Comment gagner de l'argent, argent, informarique, formation, facebook, whatsapp" >
+    <link rel="icon" href="icons/mon logo.ico" type="image/x-icon">
+    <meta name="description" content=" On a des formations gratuite sur le langage html et css pour vous aider a coder bien rapide et sur votre android meme si vous n'avez pas d'un ordinateur. Si vous voulez vous lancer dans cette univers">
+    <meta name="og:title" property="og:title" content="Plus de formation sur la technologie">
+    <meta name="robots" content="Formation, Informatique, technique, astuces">
+    <title>Ftech Plus</title>
+    <script src="https://apis.google.com/js/platform.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7979799450178267"
+     crossorigin="anonymous"></script>
+         <!-- Global site tag (gtag.js) - Google Analytics -->
+         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179488738-1"></script>
+         <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+    
+         gtag('config', 'UA-179488738-1');
+         </script>
+    <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css”>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  <title>Groupe Whatsapp</title>
   <style>
     *{
       box-sizing: border-box;
@@ -202,6 +223,59 @@ button{margin: 10px;
   display: table;
   clear: both;
 }
+ /* bouton resesosyo isi*/
+ .middle{
+  width: 100%;
+  text-align: center;
+}
+.btn{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+}
+.btn i{
+  line-height: 40px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+.btn:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes aaa {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
+}
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -254,7 +328,15 @@ button{margin: 10px;
         padding: 7px;
       }
     }
-
+    .share{
+      color: whitesmoke;
+      background: black;
+    }
+    .share h1{
+      border: 1px solid blue;
+      padding: 10px;
+      margin: 1px;
+    }
   </style>
 </head>
 <body>
@@ -274,7 +356,7 @@ button{margin: 10px;
       </section>
       <main>
         <section>
-          <img src="images/whatsa.png" alt="">
+          <a href="images/whatsa.png"><img src="images/whatsa.png" alt="Groupe whatsapp"></a>
         </section>
        <section class="objectif">
          <div class="ul">
@@ -298,7 +380,32 @@ button{margin: 10px;
            </ul>
          </div>
        </section>
-
+       <section class="partage">
+        <div class="share">
+          <h1 style="text-align: center;">Partager ceci a vos amis</h1>
+          <!--Mes reseau sociaux ici-->
+          <div class="middle">
+            <p style="color: white;">Invitez vos amis dans la formation</p>
+           <a class="btn facebook-btn" href="#" target="_blank">
+             <i class="fab fa-facebook-f"></i>
+           </a>
+           <a class="btn twitter-btn" href="#" target="_blank">
+             <i class="fab fa-twitter"></i>
+           </a>
+           <a class="btn whatsapp-btn" href="#" target="_blank">
+             <i class="fab fa-whatsapp"></i>
+           </a>
+           <a class="btn" href="https://youtube.com/lepoeteht" target="_blank">
+             <i class="fab fa-youtube"></i>
+           </a>
+  
+           <img
+           class="pinterest-img"
+           src=""
+           alt=""
+         />
+        </div>
+       </section>
        <section>
         <div id="form">
           <div>
@@ -464,6 +571,58 @@ document.getElementById('number').value = '';
     function fermer(){
       document.getElementById('form').style.display ='none';
     }
+  </script>
+
+<script>
+  /* 
+
+Social Share Links:
+
+WhatsApp:
+https://wa.me/?text=[post-title] [post-url]
+
+Facebook:
+https://www.facebook.com/sharer.php?u=[post-url]
+
+Twitter:
+https://twitter.com/share?url=[post-url]&text=[post-title]
+
+Pinterest:
+https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is_video=[is_video]&description=[post-title]
+
+LinkedIn:
+https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
+
+*/
+
+const facebookBtn = document.querySelector(".facebook-btn");
+const twitterBtn = document.querySelector(".twitter-btn");
+const whatsappBtn = document.querySelector(".whatsapp-btn");
+var message = document.getElementById('ul');
+
+function init() {
+
+let postUrl = encodeURI(document.location.href);
+let postTitle = encodeURI("*Formation en ligne sur Whatsapp*\nDans cette formation ,je t'apprends:\n _Base html et css_\n _Les suites de google drive_\n _Comment créer un blog gratuit_\n _Comment gagner de l'argent en ligne?_\n _Comment héberger votre site gratuitement?_\n*Clique sur le lien pour vous inscrire*");
+
+
+facebookBtn.setAttribute(
+"href",
+`https://www.facebook.com/sharer.php?u=${postUrl}`
+);
+
+twitterBtn.setAttribute(
+"href",
+`https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+);
+
+
+whatsappBtn.setAttribute(
+"href",
+`https://wa.me/?text=${postTitle} ${postUrl}`
+);
+}
+init();
   </script>
 </body>
 </html>
